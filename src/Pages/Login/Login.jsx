@@ -8,7 +8,6 @@ const Login = (props) => {
         <div id="login">
             <Form />
             <Footer />
-            Login
         </div>
     )
 }
