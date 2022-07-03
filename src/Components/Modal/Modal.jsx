@@ -5,9 +5,8 @@ const Modal = (props) => {
     return (
         <div id="modal-bcg">
             <div className='modal'>
-            <h1 onClick={props.toggleModal}>HELLO</h1>
+            <h1 onClick={props.toggleModal}>{props.modalData.candidateName}</h1>
             </div>
-            
         </div>
     )
 }

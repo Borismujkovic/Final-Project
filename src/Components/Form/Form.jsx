@@ -4,7 +4,14 @@ import "./Form.scss"
 const Form = (props) => {
     return (
         <div id="form">
-            Form
+            <label htmlFor="">
+                User Email:
+            <input type="text" />
+            </label>
+            <label htmlFor="">
+        Password:
+            <input type="text" name="" id="" />
+            </label>
         </div>
     )
 }
