@@ -11,6 +11,7 @@ import { useEffect, useState } from 'react';
 function App() {
 const [candidates, setCandidates] = useState([])
 const [reports, setReports] = useState([])
+const [openModal, setOpenModal] = useState(false)
 
 
 
@@ -31,12 +32,9 @@ useEffect(() =>{
   
 }, [])
 
-
-
-
-
-
-
+const toggleModal = () => {
+  setOpenModal(!openModal)
+}
 
   return (
     
@@ -45,7 +43,7 @@ useEffect(() =>{
       <Switch>
         <Route exact path ='/'><Login></Login></Route>
         <Route path ='/home-page'><HomePage></HomePage></Route>
-        <Route path='/admin-page'> <Admin></Admin></Route>
+        <Route path='/admin-page'> <Admin reports={reports} toggleModal={toggleModal} openModal={openModal}></Admin></Route>
       <Route path='/details'><Details></Details></Route>
       <Route path='/new-report'><NewReport></NewReport></Route>
       </Switch>

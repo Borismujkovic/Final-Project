@@ -1,0 +1,10 @@
+#admin{
+position: relative;
+    
+    .reports{
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        margin: 20px 100px;
+    }
+}

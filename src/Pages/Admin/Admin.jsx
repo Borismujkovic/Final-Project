@@ -7,10 +7,12 @@ import ReportList from "../../Components/ReportsList/ReportsList"
 const Admin = (props) => {
     return (
         <div id="admin">
+        {props.openModal && <Modal toggleModal={props.toggleModal}/>}
         <Header />
-        <Modal />
-        <ReportList />
-            Admin
+        <div className='reports'>
+        {props.reports.map((e) => <ReportList reports={e} toggleModal={props.toggleModal} />)}
+        </div>
+            
         </div>
     )
 }
