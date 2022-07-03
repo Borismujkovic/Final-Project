@@ -14,7 +14,7 @@ const [reports, setReports] = useState([])
 
 
 
-const fetchCandidates = () => {
+const fetchCandidates = (str) => {
   fetch('http://localhost:3333/api/candidates')
   .then(res => res.json())
   .then(res => setCandidates(res))
@@ -25,11 +25,14 @@ const fetchReports = () =>{
   .then(res => res.json())
   .then(res => setReports(res))
 }
+
+const 
 useEffect(() =>{
   fetchCandidates()
   fetchReports()
   
 }, [])
+
 
 
 
@@ -44,10 +47,10 @@ useEffect(() =>{
       
       <Switch>
         <Route exact path ='/'><Login></Login></Route>
-        <Route path ='/home-page'><HomePage></HomePage></Route>
+        <Route path ='/home-page'><HomePage candidates={candidates}></HomePage></Route>
         <Route path='/admin-page'> <Admin></Admin></Route>
-      <Route path='/details'><Details></Details></Route>
-      <Route path='/new-report'><NewReport></NewReport></Route>
+        <Route path='/details'><Details></Details></Route>
+        <Route path='/new-report'><NewReport></NewReport></Route>
       </Switch>
     </div>
   );
