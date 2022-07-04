@@ -1,12 +1,26 @@
 import React from 'react';
 import "./CandidateCard.scss"
+import { Link } from 'react-router-dom';
+
 
 const CandidateCard = (props) => {
     return (
+        
         <div id="candidateCard">
-            <img src="https://editorial01.shutterstock.com/wm-preview-1500/7286607a/9319a343/Shutterstock_7286607a.jpg" alt="" />
-            <h2>Marko Milosevic</h2>
+        <Link to="./details">
+        <div className='wrap'> 
+         <img src={props.candidate.avatar} alt=""></img>
+         <h2>{props.candidate.name}</h2>
         </div>
+        </Link>
+        </div>
+          
+        
+         
+             
+             
+     
+             
     )
 }
 

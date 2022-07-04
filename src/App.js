@@ -17,7 +17,7 @@ const [openModal, setOpenModal] = useState(false)
 
 
 
-const fetchCandidates = () => {
+const fetchCandidates = (str) => {
   fetch('http://localhost:3333/api/candidates')
   .then(res => res.json())
   .then(res => setCandidates(res))
@@ -28,10 +28,10 @@ const fetchReports = () =>{
   .then(res => res.json())
   .then(res => setReports(res))
 }
-useEffect(() =>{
-  fetchCandidates()
+
+useEffect(()=>{
+  fetchCandidates();
   fetchReports()
-  
 }, [])
 
 const toggleModal = () => {
@@ -45,7 +45,7 @@ const toggleModal = () => {
 
       <Switch>
         <Route exact path ='/'><Login></Login></Route>
-        <Route path ='/home-page'><HomePage></HomePage></Route>
+        <Route path ='/home-page'><HomePage candidates={candidates}></HomePage></Route>
         <Route path='/admin-page'> <Admin reports={reports} toggleModal={toggleModal} openModal={openModal}></Admin></Route>
       <Route path='/details'><Details></Details></Route>
       <Route path='/new-report'><NewReport></NewReport></Route>

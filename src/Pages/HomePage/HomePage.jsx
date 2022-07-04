@@ -43,6 +43,10 @@ const HomePage = (props) => {
             </main>
             <Footer />
         </div>
+            
+            
+           
+            
     )
 }
 
