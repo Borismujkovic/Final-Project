@@ -23,6 +23,18 @@ const HomePage = (props) => {
                 <CandidateCard />
                 <CandidateCard />
                 <CandidateCard />
+                <CandidateCard />
+                <CandidateCard />
+                <CandidateCard />
+                <CandidateCard />
+                <CandidateCard />
+                <CandidateCard />
+                <CandidateCard />
+                <CandidateCard />
+                <CandidateCard />
+                <CandidateCard />
+                <CandidateCard />
+                <CandidateCard />
             </div>
             </main>
             <Footer />
