@@ -8,9 +8,13 @@ const Info = (props) => {
         <div id= "info">
             <div className='candidateInfo'>
                 <img src="https://pbs.twimg.com/profile_images/1154468712/MILOSEVIC_400x400.jpg" alt="" />
-                <h2>Slobodan</h2>
-                <h3>ex prezidente</h3>
-                <h3>sloba.predsednik@yahoo.com</h3>
+                <div>
+                <h2>Full Name: </h2>
+                <h3>Date of Birth: </h3>
+                <h3>Email:</h3>
+                <h3>Education: </h3>
+                
+                </div>
             </div>
             <div className='reportWrapper'>
                 <ReportListItem></ReportListItem>

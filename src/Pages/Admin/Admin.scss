@@ -1,32 +1,32 @@
-#admin{
-position: relative;
+#admin {
+  position: relative;
 
-
-main{
-margin-top: 50px;
-    .search{
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        margin: 0 200px;
-    .search-image{
+  main {
+    background-color: rgb(28 42 35);
+    padding-top: 50px;
+    .search {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin: 0 200px;
+      .search-image {
         position: relative;
-        input{
-            padding: 10px 20px;
-            border-radius: 20px;   
-            font-weight: 600;
-            outline: none;
+        input {
+          padding: 10px 20px;
+          border-radius: 20px;
+          font-weight: 600;
+          outline: none;
         }
-        img{
-            height: 25px;
-            position: absolute;
-            top: 5px;
-            right: 10px;
-            cursor: pointer;
+        img {
+          height: 25px;
+          position: absolute;
+          top: 5px;
+          right: 10px;
+          cursor: pointer;
         }
-    }
+      }
 
-    .admin-button{
+      .admin-button {
         padding: 10px 25px;
         background-color: rgb(245 130 31);
         cursor: pointer;
@@ -35,34 +35,36 @@ margin-top: 50px;
         font-weight: 700;
         border-top-left-radius: 20px;
         border-bottom-left-radius: 20px;
-        
-    }
-    .newReport-button{
+        font-size: 20px;
+      }
+      .newReport-button {
         padding: 10px 25px;
         background-color: transparent;
         cursor: pointer;
+        font-size: 20px;
         font-weight: 700;
         border: 2px solid rgb(245 130 31);
         border-top-right-radius: 20px;
         border-bottom-right-radius: 20px;
-        &:active{
-            padding: 10px 25px;
-        background-color: rgb(245 130 31);
-        cursor: pointer;
-        // border: 2px solid rgb(245 130 31);
-        color: white;
-        font-weight: 700;
-        border-top-right-radius: 20px;
-        border-bottom-right-radius: 20px;
-        }
-    }
-} 
+        &:active {
+          padding: 10px 25px;
+          background-color: rgb(245 130 31);
+          cursor: pointer;
 
-.reports{
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
-    margin: 50px 300px;
-}
-}
+          // border: 2px solid rgb(245 130 31);
+          color: white;
+          font-weight: 700;
+          border-top-right-radius: 20px;
+          border-bottom-right-radius: 20px;
+        }
+      }
+    }
+
+    .reports {
+      display: flex;
+      flex-wrap: wrap;
+      // flex-direction: column;
+      margin: 50px 300px;
+    }
+  }
 }

@@ -2,6 +2,8 @@
     min-height: 100vh;
     background-image: url(https://cdn.pixabay.com/photo/2021/02/03/18/01/abstract-5978801_960_720.jpg);
     background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -35,7 +37,7 @@
             margin-bottom: 25px;
         }
         input{
-            background-color: rgba(180, 180, 180, 0.2);
+            background-color: rgb(104 115 122);
             border: none;
             outline: none;
             color: white;
@@ -44,7 +46,7 @@
         }
         select{
             width: 100%;
-            background-color: rgba(180, 180, 180, 0.2);
+            background-color: rgb(104 115 122);
             color: white;
             border: none;
             outline: none;
