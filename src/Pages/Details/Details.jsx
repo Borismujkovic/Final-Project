@@ -10,7 +10,7 @@ const Details = (props) => {
         <div id="details">
             <Header />
             <Info />
-            <Modal/>
+            {/* <Modal/> */}
             <Footer />
         </div>
     )

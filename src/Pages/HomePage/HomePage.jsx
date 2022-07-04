@@ -23,22 +23,7 @@ const HomePage = (props) => {
             </div>
             <main>
             <div className='cardWrapper'>
-                <CandidateCard />
-                <CandidateCard />
-                <CandidateCard />
-                <CandidateCard />
-                <CandidateCard />
-                <CandidateCard />
-                <CandidateCard />
-                <CandidateCard />
-                <CandidateCard />
-                <CandidateCard />
-                <CandidateCard />
-                <CandidateCard />
-                <CandidateCard />
-                <CandidateCard />
-                <CandidateCard />
-                <CandidateCard />
+                {props.candidates.map(e => <CandidateCard candidate={e} />)}
             </div>
             </main>
             <Footer />
