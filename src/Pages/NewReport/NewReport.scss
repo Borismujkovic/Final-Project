@@ -1,0 +1,48 @@
+#newReport{
+   background-color: tomato;
+   min-height: 100vh;
+
+   main{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: calc(100vh - 20.4px);
+
+
+   }
+    
+   .wrapMain{
+       display: flex;
+       flex-direction: column;
+       text-align: center;
+       justify-content: center;
+       align-items: center;
+       
+   }
+
+   .createNewReport{
+       display: flex;
+       justify-content: center;
+     
+   }
+
+   .chooseCandidate{
+       display: flex;
+       flex-direction: column;
+       border-right: 3px solid black ;
+       padding: 50px;
+
+       ul{
+           list-style-type: none;
+
+        li{
+            border: 1px solid black;
+            margin:20px;
+            background-color: white;
+            width:250px;
+
+        }
+       }
+   }
+}
+
