@@ -27,10 +27,10 @@ const Form = (props) => {
             </div>
 
             <div className='logo'>
-                <a href="https://www.google.com/"  target='#blank'>
+                <a href="https://www.youtube.com/"  target='#blank'>
                 <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9e/YouTube_Logo_%282013-2017%29.svg/2560px-YouTube_Logo_%282013-2017%29.svg.png" alt=""/>
                 </a>
-                <a href="https://www.youtube.com/"  target='#blank'>
+                <a href="https://www.google.com/"  target='#blank'>
                 <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Google_2015_logo.svg/2560px-Google_2015_logo.svg.png" alt="" />
                 </a>
                 <a href="https://www.facebook.com/"  target='#blank'>

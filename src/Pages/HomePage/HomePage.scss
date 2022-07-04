@@ -4,14 +4,20 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  background-image: url(https://images.unsplash.com/photo-1502488214684-62c86de1c247?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2071&q=80);
+  background-image: url(https://images.pexels.com/photos/5622897/pexels-photo-5622897.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);
+  background-repeat: no-repeat;
+  background-size: cover;
   .cardWrapper {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     margin: 50px 150px;
-
     cursor: pointer;
+
+  
+
+    
+  
   }
   main {
     display: flex;
@@ -44,12 +50,16 @@
       padding: 10px;
       border: none;
       cursor: pointer;
+        
     }
     .myCandidates {
       background-color: rgb(245 130 31);
       color: white;
       text-decoration: none;
       padding: 10px 20px;
+      &:hover{
+        background-color: rgba(245, 131, 31, 0.788);;
+      }
     }
   }
   .main {
