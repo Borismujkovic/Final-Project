@@ -12,7 +12,6 @@ const Details = (props) => {
             <Info />
             <Modal/>
             <Footer />
-            Details
         </div>
     )
 }

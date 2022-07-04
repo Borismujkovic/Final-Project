@@ -4,7 +4,6 @@ import "./Modal.scss"
 const Modal = (props) => {
     return (
         <div id="modal">
-            modal
         </div>
     )
 }

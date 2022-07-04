@@ -1,0 +1,20 @@
+#header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 150px;
+    background-color: tomato;
+    img{
+        height: 150px;
+    }
+    img, button{
+        margin: 0 50px;
+    }
+    button{
+        padding: 20px 30px;
+        border: none;
+        border-radius: 20px;
+        cursor: pointer;
+        font-size: 18px;
+    }
+}

@@ -1,0 +1,17 @@
+#reportListItem{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    img{
+        height: 52px;
+        cursor: pointer;
+    }
+    *{
+        margin: 5px 5px;
+        background-color: lime;
+    }
+    h3{
+        width: 400px;
+        padding: 15px;
+    }
+}

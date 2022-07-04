@@ -1,0 +1,51 @@
+#homePage{
+    background-color: yellow;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    .cardWrapper{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        margin: 10px;
+        cursor: pointer;
+    }
+    main{
+        display: flex;
+        flex-grow: 1;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+        .wrap{
+            display: flex;
+            justify-content: space-between;
+            margin: 50px 50px;
+        input{
+            border: none;
+            padding: 10px;
+            outline: none;
+        }
+        .search {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            img{
+                width: 13px;
+            }
+        }
+        button{
+            padding: 10px;
+            border: none;
+            cursor: pointer;
+        }
+        .myCandidates{
+            background-color: tomato;
+            color: white;
+            text-decoration: none;
+            padding: 10px 20px;
+        }
+    }
+
+}
