@@ -1,0 +1,58 @@
+#form{
+    height: 100vh;
+    width: 100%;
+    background-image: url(https://images.unsplash.com/photo-1531545514256-b1400bc00f31?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1974&q=80);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    .login{
+        min-height: 400px;
+        width: 400px;
+        background-color: rgba(3, 3, 3, 0.40);       
+        display: flex;
+        color: white;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        font-weight: 700;
+        label{
+            font-size: 30px;
+        }
+        input{
+            padding: 10px 20px;
+            border: 2px solid black;
+            border-radius: 20px;
+            font-size: 20px;
+            
+        }
+        select{
+            padding: 10px 20px;
+            border-radius: 20px;
+            font-size: 20px;
+            border: 2px solid black;
+        }
+        button{
+            padding: 10px 20px;
+            border: 3px solid black;
+            background-color: transparent;
+            border-radius: 20px;
+            font-size: 20px;
+            margin-top: 20px;
+            cursor: pointer;
+        }
+    }
+    .logo{
+        width: 50%;
+        display: flex;
+        margin: 20px auto;
+        // background-color: white;
+        justify-content: space-between;
+        img{
+            height: 100px;
+        }
+    }
+}

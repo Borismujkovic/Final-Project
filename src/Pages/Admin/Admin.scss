@@ -1,5 +1,33 @@
 #admin{
 position: relative;
+
+
+.search{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 100px;
+    input{
+        padding: 10px 20px;
+        border-radius: 20px;
+        background-image: url(https://img.myloview.com/stickers/search-icon-magnifying-glass-icon-vector-magnifier-or-loupe-sign-400-162888608.jpg);
+        background-position-x: 95%;
+        background-position-y: 30%;
+        background-size: 30px;
+        background-repeat: no-repeat;
+    }
+
+    .admin-button{
+        padding: 10px 20px;
+        background-color: grey;
+        cursor: pointer;
+    }
+    .newReport-button{
+        padding: 10px 20px;
+        background-color: lightgray;
+        cursor: pointer;
+    }
+} 
     
     .reports{
         display: flex;

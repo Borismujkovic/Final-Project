@@ -17,6 +17,13 @@ const Admin = (props) => {
         <div id="admin">
         {props.openModal && <Modal toggleModal={props.toggleModal} modalData={modalData}/>}
         <Header />
+        <div className='search'>
+        <input type="text" />
+        <div>
+            <button className='admin-button'>Admin Page</button>
+            <button className='newReport-button'>New Report</button>
+        </div>
+        </div>
         <div className='reports'>
         {props.reports.map((e) => <ReportList reports={e} toggleModal={props.toggleModal} selectCandidate={selectCandidate}/>)}
         </div>

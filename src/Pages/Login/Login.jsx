@@ -7,7 +7,6 @@ const Login = (props) => {
     return (
         <div id="login">
             <Form />
-            <Footer />
         </div>
     )
 }
