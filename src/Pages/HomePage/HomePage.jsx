@@ -11,7 +11,7 @@ const HomePage = (props) => {
         <div id="homePage">
             <Header />
             <input placeholder='search'></input>
-            <Link to="/admin-page">My Candidates</Link>
+            <Link to="/admin-page">My Candidatesds</Link>
             <div className='main'>
             {props.candidates.map(e => <CandidateCard candidate={e}/>)}
             </div>
