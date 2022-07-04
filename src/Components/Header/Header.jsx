@@ -4,7 +4,7 @@ import "./Header.scss"
 const Header = (props) => {
     return (
         <div id="header">
-            header
+            <button>Logout</button>
         </div>
     )
 }

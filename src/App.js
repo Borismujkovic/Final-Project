@@ -26,15 +26,10 @@ const fetchReports = () =>{
   .then(res => setReports(res))
 }
 
-const 
-useEffect(() =>{
-  fetchCandidates()
+useEffect(()=>{
+  fetchCandidates();
   fetchReports()
-  
 }, [])
-
-
-
 
 
 
