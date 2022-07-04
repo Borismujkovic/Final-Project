@@ -1,0 +1,9 @@
+#reportsList{
+    width: 100%;
+    .singleReport{
+        border: 2px solid black;
+        display: flex;
+        justify-content: space-between;
+        margin: 10px 0;
+    }
+}

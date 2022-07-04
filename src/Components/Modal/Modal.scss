@@ -1,0 +1,38 @@
+#modal-bcg{
+    background-color: rgba(77, 75, 75, 0.658);
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    .modal{
+        background-color: white;
+        min-height: 300px;
+        min-width: 700px;
+        padding: 30px 10px;
+        .name{
+            text-align: center;
+        }
+        .candidateDetails{
+            display: flex;
+            justify-content:flex-start;
+            height: 300px;
+            .details{
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                margin: 0 30px;
+                h4{
+                    color: green;
+                }
+            }
+            .report{
+                p{
+                    border: 2px solid black;
+                }
+            }
+        }
+    }
+
+}

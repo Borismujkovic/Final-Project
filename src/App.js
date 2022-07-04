@@ -8,10 +8,12 @@ import { Switch, Route } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 
 
+
 function App() {
 const [candidates, setCandidates] = useState([]) // fetchujemo sve kandidate
 const [reports, setReports] = useState([]) // fetchujemo sve reportove
 const [user, setUser] = useState("") //hvatamo informaciju o tome koja kompanija se ulogovala
+const [openModal, setOpenModal] = useState(false)
 
 
 
@@ -32,22 +34,21 @@ useEffect(() =>{
   
 }, [])
 
-
-
-
-
-
-
+const toggleModal = () => {
+  setOpenModal(!openModal)
+}
 
   return (
     
     <div id="App">
+      
+
       <Switch>
         <Route exact path ='/'><Login></Login></Route>
         <Route path ='/home-page'><HomePage></HomePage></Route>
-        <Route path='/admin-page'> <Admin></Admin></Route>
-        <Route path='/details'><Details></Details></Route>
-        <Route path='/new-report'><NewReport></NewReport></Route>
+        <Route path='/admin-page'> <Admin reports={reports} toggleModal={toggleModal} openModal={openModal}></Admin></Route>
+      <Route path='/details'><Details></Details></Route>
+      <Route path='/new-report'><NewReport></NewReport></Route>
       </Switch>
     </div>
   );
