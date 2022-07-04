@@ -1,0 +1,19 @@
+#footer{
+    background-color: tomato;
+    .listOfCompanies{
+        display: flex;
+        list-style-type: none;
+        justify-content: center;
+        padding: 15px;
+        
+    }li{
+        margin: 0 30px;
+        font-size: 20px;
+        font-weight: 900px;
+        cursor: pointer;
+        color: white;
+    }a{
+        text-decoration: none;
+        color: white;
+    }
+}
