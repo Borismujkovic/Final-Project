@@ -4,8 +4,10 @@ import { Link } from "react-router-dom";
 
 const CandidateCard = (props) => {
   return (
-    <div id="candidateCard">
-      <Link to="./details" className="candidate-details">
+    <div id="candidateCard" onClick={() => {
+       props.selectCandidate(props.candidate)
+    }}>
+      <Link to="./details" className="candidate-details" >
         <div className="wrap">
           {/* <img src={props.candidate.avatar} alt=""></img> */}
           <h2>{props.candidate.name}</h2>

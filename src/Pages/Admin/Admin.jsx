@@ -3,26 +3,22 @@ import "./Admin.scss";
 import Header from "../../Components/Header/Header"
 import Modal from "../../Components/Modal/Modal"
 import ReportList from "../../Components/ReportsList/ReportsList"
+import {Link} from "react-router-dom"
 
 const Admin = (props) => {
-    const [modalData, setModalData] = useState(null)
-
-
-    const selectCandidate = (obj)  => {
-        setModalData(obj)
-    }
+    
 
     
     return (
         <div id="admin">
-        {props.openModal && <Modal toggleModal={props.toggleModal} modalData={modalData}/>}
+        {props.openModal && <Modal toggleModal={props.toggleModal} selectCandidate={props.selectCandidate} modalData={props.modalData}/>}
         <Header />
         <main>
 
         <div className='search'>
         <div>
-            <button className='admin-button'>Admin Page</button>
-            <button className='newReport-button'>New Report</button>
+            <Link className='admin-button'>Admin Page</Link>
+            <Link to="/new-report" className='newReport-button'>New Report</Link>
         </div>
             <div className='search-image'>
                 <input type="text" />
@@ -30,7 +26,7 @@ const Admin = (props) => {
             </div>
         </div>
         <div className='reports'>
-        {props.reports.map((e) => <ReportList reports={e} toggleModal={props.toggleModal} selectCandidate={selectCandidate}/>)}
+        {props.reports.map((e) => <ReportList reports={e} toggleModal={props.toggleModal} selectCandidate={props.selectCandidate}/>)}
         </div>
         </main>
         </div>

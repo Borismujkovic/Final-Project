@@ -36,6 +36,7 @@
         border-top-left-radius: 20px;
         border-bottom-left-radius: 20px;
         font-size: 20px;
+        text-decoration: none;
       }
       .newReport-button {
         padding: 10px 25px;
@@ -46,7 +47,9 @@
         border: 2px solid rgb(245 130 31);
         border-top-right-radius: 20px;
         border-bottom-right-radius: 20px;
-        &:active {
+        text-decoration: none;
+        color: white;
+        &:focus {
           padding: 10px 25px;
           background-color: rgb(245 130 31);
           cursor: pointer;
@@ -56,6 +59,7 @@
           font-weight: 700;
           border-top-right-radius: 20px;
           border-bottom-right-radius: 20px;
+          text-decoration: none;
         }
       }
     }
