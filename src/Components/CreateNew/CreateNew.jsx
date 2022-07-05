@@ -2,32 +2,59 @@ import React from 'react';
 import "./CreateNew.scss"
 
 const CreateNew = (props) => {
-    return (
+    return ( 
+            
         <div id="createNew">
-            <h3>Create new report:</h3>
+        
+            <div className='form'>
+            
+
+            <div className='wrapDropdown'>
             <label htmlFor="">
-                 Date:
-                <input placeholder=""></input>
+                 <span>Date:</span>
+                <input type="date" placeholder=""></input>
             </label>
+
+            <label htmlFor="">
+                 <span>Phase:</span>
+                <select name="Phase" id="" >
+                    <option selected disabled hidden>Phase</option>
+                    <option value="Ongoing">Ongoing</option>
+                    <option value="Active">Active</option>
+                    <option value="Declined">Declined</option>
+                </select>
+            </label>
+            
+            <label htmlFor="">
+                <span>Status:</span>
+                 <select name="Status" id="">
+                   <option selected disabled hidden>Status</option>
+                    <option value="HR">HR</option>
+                    <option value="Technical">Technical</option>
+                    <option value="Final">Final</option>
+                </select>
+            </label>
+            </div>
+            
             <label  htmlFor="">
-                 Company ID:
-                <input placeholder=""></input>
+               <span>Report:</span>
+                <textarea className="report" type="text"></textarea>
             </label>
-            <label htmlFor="">
-                 Phase:
-                <input placeholder=""></input>
-            </label>
-            <label htmlFor="">
-                 Status:
-                <input placeholder=""></input>
-            </label>
-            <label htmlFor="">
-                 Report:
-                <input className="report" type="text"></input>
-            </label>
+            
             <button>Submit</button>
+            </div>
+              
         </div>
+            
+            
+        
     )
 }
 
 export default CreateNew
+            
+
+           
+           
+            
+            

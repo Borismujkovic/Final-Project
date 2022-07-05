@@ -53,10 +53,15 @@
         
     }
     .myCandidates {
-      background-color: rgb(245 130 31);
-      color: white;
-      text-decoration: none;
-      padding: 10px 20px;
+        padding: 10px 25px;
+        background-color: rgb(245 130 31);
+        cursor: pointer;
+        border: 2px solid rgb(245 130 31);
+        color: white;
+        font-weight: 700;
+        border-radius: 20px;
+        text-decoration: none;
+        
       &:hover{
         background-color: rgba(245, 131, 31, 0.788);;
       }

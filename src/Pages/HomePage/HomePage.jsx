@@ -15,11 +15,12 @@ const HomePage = (props) => {
         <div id="homePage">
             <Header />
             <div className='wrap'>
+            <Link to="/admin-page" className='myCandidates'>My candidates</Link>
             <div className='search-image'>
                 <input type="text" />
                 <img src="https://cdn-icons-png.flaticon.com/512/151/151773.png" alt="" />
             </div>
-                <Link to="/admin-page" className='myCandidates'>My candidates</Link>
+                
             </div>
             <main>
             <div className='cardWrapper'>

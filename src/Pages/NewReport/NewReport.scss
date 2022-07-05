@@ -1,36 +1,47 @@
 #newReport{
    background-color: tomato;
    min-height: 100vh;
-   background-image: url(https://images.pexels.com/photos/6070367/pexels-photo-6070367.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);
+   background-image: url(https://images.pexels.com/photos/952670/pexels-photo-952670.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);
    background-repeat: no-repeat;
    background-size: cover;
    background-position: center;
+   height: 100vh;
+   
    
    main{
         display: flex;
         justify-content: center;
         align-items: center;
-        min-height: calc(100vh - 20.4px);
+        // min-height: calc(100vh - 20.4px);
+        // min-height: 100vh;
 
 
    }
+
+   h1{
+    
+    font-size: 80px;
+    color: white;
+    padding: 20px;
+    padding-bottom: 40px;
+    text-align: center;
+    
+}
     
    .wrapMain{
        display: flex;
-       flex-direction: column;
-       text-align: center;
+    //    flex-direction: column;
        justify-content: center;
        align-items: center;
-       h1{
-           margin:50px;
-           font-size: 80px;
-       }
+       
        
    }
 
    .createNewReport{
        display: flex;
        justify-content: center;
+       align-items: center;
+       flex-direction: row;
        
        
      
@@ -39,13 +50,16 @@
    .chooseCandidate{
        display: flex;
        flex-direction: column;
-       border-right: 3px solid black ;
-       padding: 50px;
-
+       border-right: 5px solid black ;
+    //    padding: 50px;
+       h3{
+        color: rgb(245 130 31);;
+       }
        ul{
            list-style-type: none;
            font-weight: 700;
            font-size: 20px;
+           color:rgb(245 130 31);
            
 
         li{
@@ -53,6 +67,7 @@
             margin:20px;
             background-color: white;
             width:250px;
+            color: black;
 
         }
        }

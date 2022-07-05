@@ -1,23 +1,74 @@
-#createNew{
+#createNew {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    margin: 50px;
+    padding-top: 110px;
+    justify-content: center;
+    margin-left: 70px;
     font-weight: 700;
+    color: rgb(245 130 31);
+    width: 500px;
+    height: 300px;
     
-    h3{
+    h3 {
         font-weight: 700;
-        font-size: 20px;
-           
+        margin: 20px;
+    } 
+    
+    .form{
+        height: 800px;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        align-items:flex-start;
+        
+        .wrapDropdown{
+            margin-bottom: 30px;
+
+            input{
+                margin-right: 10px;
+            }
+
+            select{
+                margin-right: 10px;
+            }
+            
+        }
+        span{
+            margin-right: 7px;
+            
+        }
+
+        
+        .report {
+            height: 150px;
+            width: 483px;
+            margin-top: 5px;
+        }
+            
+       
+       
+        }
+        button {
+            margin: 10px;
+            padding: 10px 35px;
+            background-color: rgb(245 130 31);
+            cursor: pointer;
+            border: 2px solid rgb(245 130 31);
+            color: white;
+            font-weight: 700;
+            border-radius: 20px;
+            text-decoration: none;
+            
+            &:hover {
+                background-color: rgba(245, 131, 31, 0.788);
+            }
+        }
     }
-    input{
-        padding: 5px;
-        margin: 10px;
-    }
-    .report{
-        height: 150px;
         
         
+
+
+  
+
         
-    }
-}
+
