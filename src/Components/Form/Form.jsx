@@ -21,8 +21,12 @@ const Form = (props) => {
                     Company:
                 </label>
                 <select name="company" id="">
+                    <option selected disabled hidden>Select company</option>
                     <option value="facebook">Facebook</option>
                     <option value="google">Google</option>
+                    <option value="tesla">Tesla</option>
+                    <option value="alphabet">Alphabet</option>
+                    <option value="microsoft">Microsoft</option>
                 </select>
                 <button>Login</button>
             </div>

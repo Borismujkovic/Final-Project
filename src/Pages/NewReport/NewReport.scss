@@ -1,114 +1,42 @@
 #newReport{
-   background-color: tomato;
-   min-height: 100vh;
-   background-image: url(https://images.pexels.com/photos/952670/pexels-photo-952670.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);
-   background-repeat: no-repeat;
-   background-size: cover;
-   background-position: center;
-   height: 100vh;
-   
-   
-   main{
+    main{
         display: flex;
-        justify-content: center;
+        min-height: calc(100vh - 150px);
+        background-color: beige;
         align-items: center;
-        // min-height: calc(100vh - 20.4px);
-        // min-height: 100vh;
-
-  main {
-    min-height: calc(100vh - 20.4px);
-    background-color: rgb(28 42 35);
-    padding-top: 50px;
-
-    .search {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      margin: 00px 200px;
-      .search-image {
-        position: relative;
-        input {
-          padding: 10px 20px;
-          border-radius: 20px;
-          font-weight: 600;
-          outline: none;
+        .chooseCandidate{
+            background-color: red;
+            border-right: 5px solid black;
+            width: 50%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
         }
-        img {
-          height: 25px;
-          position: absolute;
-          top: 5px;
-          right: 10px;
-          cursor: pointer;
+        .createNewReport{
+            background-color: blue;
+            width: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
         }
-      }
-
-      .admin-button {
-        padding: 10px 25px;
-        background-color: transparent;
-        cursor: pointer;
-        border: 2px solid rgb(245 130 31);
-        color: white;
-        font-weight: 700;
-        border-top-left-radius: 20px;
-        border-bottom-left-radius: 20px;
-        font-size: 20px;
-        text-decoration: none;
-      }
-      .newReport-button {
-        padding: 10px 25px;
-        background-color: rgb(245 130 31);
-        cursor: pointer;
-        font-size: 20px;
-        font-weight: 700;
-        border: 2px solid rgb(245 130 31);
-        border-top-right-radius: 20px;
-        border-bottom-right-radius: 20px;
-        text-decoration: none;
-        color: white;
-        &:active {
-          padding: 10px 25px;
-          background-color: rgb(245 130 31);
-          cursor: pointer;
-
-          // border: 2px solid rgb(245 130 31);
-          color: white;
-          font-weight: 700;
-          border-top-right-radius: 20px;
-          border-bottom-right-radius: 20px;
-          text-decoration: none;
+        .ccHeader, .cnrHeader{
+            display: flex;
+            align-items: center;
         }
-      }
+        .number{
+            border: 4px solid white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            width: 50px;
+            height: 50px;
+            font-size: 30px;
+            font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            border-radius: 50%;
+            margin-right: 30px; 
+        }
+        
     }
-
-    .wrapMain {
-      display: flex;
-      flex-direction: column;
-      text-align: center;
-      justify-content: center;
-      align-items: center;
-
-      .createNewReport {
-        display: flex;
-        justify-content: center;
-        margin: 50px;
-        .chooseCandidate {
-          border-right: 3px solid black;
-          padding-right: 80px;
-          ul {
-            list-style-type: none;           
-            li {
-              border: 1px solid white;
-              margin: 20px;
-              background-color: transparent;
-              width: 250px;
-              padding: 10px;
-              border-radius: 20px;
-              color: white;
-            }
-          }
-        }
-      }
-    }
-  }
-}
 }
