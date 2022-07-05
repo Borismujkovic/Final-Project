@@ -8,16 +8,17 @@ import {Link} from "react-router-dom"
 
 
 const HomePage = (props) => {
+    
 
 
     return (
         <div id="homePage">
             <Header />
             <div className='wrap'>
-            <Link to="/admin-page" className='myCandidates'>My candidates</Link>
+            <Link to="/admin-page" className='myCandidates' >My candidates</Link>
             <div className='search-image'>
                 <input type="text" />
-                <img src="https://cdn-icons-png.flaticon.com/512/151/151773.png" alt="" />
+                <img src="https://cdn-icons-png.flaticon.com/512/151/151773.png" alt=""/>
             </div>
                 
             </div>

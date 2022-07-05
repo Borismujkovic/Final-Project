@@ -6,13 +6,13 @@
     background-color: rgb(28 42 35);
     .candidateInfo{
         display: flex;
-        // flex-direction: column;
         align-items: center;
         margin: 20px 100px;
         color: white;
         > img{
             border-radius: 50%;
             height: 250px;
+            width: 250px;
         }
         > div{
             margin-left: 100px;

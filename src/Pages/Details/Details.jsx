@@ -6,6 +6,9 @@ import Info from "../../Components/Info/Info"
 import Modal from "../../Components/Modal/Modal"
 
 const Details = (props) => {
+
+
+
     return (
         <div id="details">
             <Header />
