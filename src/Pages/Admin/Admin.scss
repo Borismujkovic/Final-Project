@@ -1,5 +1,6 @@
 #admin {
-  position: relative;
+  // position: relative;
+  min-height: 100vh;
 
   main {
     background-color: rgb(28 42 35);
@@ -49,9 +50,9 @@
         border-bottom-right-radius: 20px;
         text-decoration: none;
         color: white;
-        &:focus {
+        &:hover {
           padding: 10px 25px;
-          background-color: rgb(245 130 31);
+          background-color: rgba(245, 131, 31, 0.788);
           cursor: pointer;
 
           // border: 2px solid rgb(245 130 31);
@@ -68,7 +69,8 @@
       display: flex;
       flex-wrap: wrap;
       // flex-direction: column;
-      margin: 50px 300px;
+      margin: 0px 300px;
+      margin-top: 50px;
     }
   }
 }

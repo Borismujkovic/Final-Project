@@ -1,24 +1,75 @@
 #newReport{
+
+    .buttons{
+        height: 80px;
+        padding: 50px;
+        background-color: rgb(28 42 35);
+        .admin-button {
+            padding: 10px 25px;
+            background-color: transparent;
+            cursor: pointer;
+            border: 2px solid rgb(245 130 31);
+            color: white;
+            font-weight: 700;
+            border-top-left-radius: 20px;
+            border-bottom-left-radius: 20px;
+            font-size: 20px;
+            text-decoration: none;
+            &:hover {
+                padding: 10px 25px;
+                background-color: rgba(245, 131, 31, 0.788);
+                cursor: pointer;
+                color: white;
+                font-weight: 700;
+                text-decoration: none;
+              }
+          }
+          .newReport-button {
+            padding: 10px 25px;
+            background-color: rgb(245 130 31);
+            cursor: pointer;
+            font-size: 20px;
+            font-weight: 700;
+            border: 2px solid rgb(245 130 31);
+            border-top-right-radius: 20px;
+            border-bottom-right-radius: 20px;
+            text-decoration: none;
+            color: white;
+            
+          
+    }
+    }
     main{
         display: flex;
         min-height: calc(100vh - 150px);
-        background-color: beige;
+        background-color: rgb(28 42 35);
         align-items: center;
+        
+        
         .chooseCandidate{
-            background-color: red;
-            border-right: 5px solid black;
+            // background-color: red;
+            border-right: 5px solid white;
             width: 50%;
             display: flex;
             flex-direction: column;
-            justify-content: center;
+            // justify-content: center;
             align-items: center;
+            min-height: 500px;
+            
+            
         }
         .createNewReport{
-            background-color: blue;
+            // background-color: blue;
             width: 50%;
             display: flex;
-            justify-content: center;
+            flex-direction: column;
+
+            // justify-content: center;
             align-items: center;
+            min-height: 500px;
+
+            
+
         }
         .ccHeader, .cnrHeader{
             display: flex;
@@ -35,8 +86,12 @@
             font-size: 30px;
             font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
             border-radius: 50%;
-            margin-right: 30px; 
+            margin-right: 20px; 
+            box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+
         }
-        
+        h2{
+            color: white;
+        }
     }
 }

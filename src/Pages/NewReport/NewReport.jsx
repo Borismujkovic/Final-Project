@@ -10,7 +10,12 @@ const NewReport = (props) => {
     return (
         <div id="newReport">
             <Header />
+            <div className='buttons'>
+            <Link className='admin-button' to='admin-page'>Admin Page</Link>
+            <Link to="/new-report" className='newReport-button'>New Report</Link>
+        </div>
             <main>
+                
                 <div className='chooseCandidate'>
                     <div className='ccHeader'>
                         <p className='number'>1</p>

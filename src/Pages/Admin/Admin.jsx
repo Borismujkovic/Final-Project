@@ -4,6 +4,7 @@ import Header from "../../Components/Header/Header"
 import Modal from "../../Components/Modal/Modal"
 import ReportList from "../../Components/ReportsList/ReportsList"
 import {Link} from "react-router-dom"
+import Footer from '../../Components/Footer/Footer';
 
 const Admin = (props) => {
     
@@ -29,6 +30,7 @@ const Admin = (props) => {
         {props.reports.map((e) => <ReportList reports={e} toggleModal={props.toggleModal} selectCandidate={props.selectCandidate}/>)}
         </div>
         </main>
+        {/* <Footer /> */}
         </div>
     )
 }

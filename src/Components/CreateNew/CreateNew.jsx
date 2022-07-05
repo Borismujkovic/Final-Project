@@ -10,12 +10,12 @@ const CreateNew = (props) => {
             
 
             <div className='wrapDropdown'>
-            <label htmlFor="">
+            <label>
                  <span>Date:</span>
-                <input type="date" placeholder=""></input>
+                <input type="date" placeholder="" className='date'></input>
             </label>
 
-            <label htmlFor="">
+            <label>
                  <span>Phase:</span>
                 <select name="Phase" id="" >
                     <option selected disabled hidden>Phase</option>
@@ -25,7 +25,7 @@ const CreateNew = (props) => {
                 </select>
             </label>
             
-            <label htmlFor="">
+            <label>
                 <span>Status:</span>
                  <select name="Status" id="">
                    <option selected disabled hidden>Status</option>
@@ -36,7 +36,7 @@ const CreateNew = (props) => {
             </label>
             </div>
             
-            <label  htmlFor="">
+            <label className='textarea'>
                <span>Report:</span>
                 <textarea className="report" type="text"></textarea>
             </label>

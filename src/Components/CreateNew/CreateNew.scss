@@ -3,10 +3,10 @@
     flex-direction: column;
     padding-top: 110px;
     justify-content: center;
-    margin-left: 70px;
+    // margin-left: 70px;
     font-weight: 700;
     color: rgb(245 130 31);
-    width: 500px;
+    // width: 500px;
     height: 300px;
     
     h3 {
@@ -37,14 +37,38 @@
             margin-right: 7px;
             
         }
+        select{
+            border-radius: 20px;
+            padding: 10px 20px;
+            
+        }
+        input{
+            padding: 10px 20px;
+            border-radius: 20px;
+
+        }
+
+        .date{
+            outline: none;
+        }
+
 
         
         .report {
             height: 150px;
-            width: 483px;
+            width: 607px;
             margin-top: 5px;
+            border-radius: 20px;
+            padding: 10px 20px;
+            font-weight: 700;
+            font-size: 15px;
+            outline: none;
         }
-            
+
+        .textarea{
+            display: flex;
+            flex-direction: column;
+        }
        
        
         }
@@ -58,7 +82,6 @@
             font-weight: 700;
             border-radius: 20px;
             text-decoration: none;
-            
             &:hover {
                 background-color: rgba(245, 131, 31, 0.788);
             }

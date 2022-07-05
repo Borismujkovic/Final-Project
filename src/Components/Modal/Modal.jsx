@@ -5,7 +5,7 @@ const Modal = (props) => {
     return (
         <div id="modalWrapper">
             <div className='modal-content'>
-                <button className='closeBtn'>X</button>
+                <button className='closeBtn' onClick={props.toggleModal}>X</button>
                 {/* <div className='name'>
                     <h1 onClick={props.toggleModal}>{props.modalData.candidateName}</h1>
                 </div> */}
