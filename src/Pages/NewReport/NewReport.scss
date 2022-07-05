@@ -1,61 +1,43 @@
 #newReport{
-   background-color: tomato;
-   min-height: 100vh;
-   background-image: url(https://images.pexels.com/photos/6070367/pexels-photo-6070367.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);
-   background-repeat: no-repeat;
-   background-size: cover;
-   background-position: center;
-   
-   main{
+    main{
         display: flex;
-        justify-content: center;
+        min-height: calc(100vh - 150px);
+        background-color: beige;
         align-items: center;
-        min-height: calc(100vh - 20.4px);
-
-
-   }
-    
-   .wrapMain{
-       display: flex;
-       flex-direction: column;
-       text-align: center;
-       justify-content: center;
-       align-items: center;
-       h1{
-           margin:50px;
-           font-size: 80px;
-       }
-       
-   }
-
-   .createNewReport{
-       display: flex;
-       justify-content: center;
-       
-       
-     
-   }
-
-   .chooseCandidate{
-       display: flex;
-       flex-direction: column;
-       border-right: 3px solid black ;
-       padding: 50px;
-
-       ul{
-           list-style-type: none;
-           font-weight: 700;
-           font-size: 20px;
-           
-
-        li{
-            border: 1px solid black;
-            margin:20px;
-            background-color: white;
-            width:250px;
-
+        .chooseCandidate{
+            background-color: red;
+            border-right: 5px solid black;
+            width: 50%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
         }
-       }
-   }
+        .createNewReport{
+            background-color: blue;
+            width: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .ccHeader, .cnrHeader{
+            display: flex;
+            align-items: center;
+        }
+        .number{
+            border: 4px solid white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            width: 50px;
+            height: 50px;
+            font-size: 30px;
+            font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            border-radius: 50%;
+            margin-right: 30px; 
+        }
+        
+    }
 }
 
