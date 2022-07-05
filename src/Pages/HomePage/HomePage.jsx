@@ -23,7 +23,7 @@ const HomePage = (props) => {
             </div>
             <main>
             <div className='cardWrapper'>
-                {props.candidates.map(e => <CandidateCard candidate={e} />)}
+                {props.candidates.map(e => <CandidateCard candidate={e} selectCandidate={props.selectCandidate}/>)}
             </div>
             </main>
             <Footer />

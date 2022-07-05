@@ -3,6 +3,7 @@ import "./NewReport.scss"
 import Header from "../../Components/Header/Header"
 import CreateNew from "../../Components/CreateNew/CreateNew"
 import ChooseCandidate from '../../Components/ChooseCandidate/ChooseCandidate';
+import {Link} from "react-router-dom"
 
 
 const NewReport = (props) => {

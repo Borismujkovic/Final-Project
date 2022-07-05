@@ -14,10 +14,15 @@ const [candidates, setCandidates] = useState([]) // fetchujemo sve kandidate
 const [reports, setReports] = useState([]) // fetchujemo sve reportove
 const [user, setUser] = useState("") //hvatamo informaciju o tome koja kompanija se ulogovala
 const [openModal, setOpenModal] = useState(false)
+const [modalData, setModalData] = useState(null)
 
 
 
-const fetchCandidates = (str) => {
+const selectCandidate = (obj) => {
+  setModalData(obj)
+}
+
+const fetchCandidates = () => {
   fetch('http://localhost:3333/api/candidates')
   .then(res => res.json())
   .then(res => setCandidates(res))
@@ -41,13 +46,11 @@ const toggleModal = () => {
   return (
     
     <div id="App">
-      
-
       <Switch>
         <Route exact path ='/'><Login></Login></Route>
-        <Route path ='/home-page'><HomePage candidates={candidates}></HomePage></Route>
-        <Route path='/admin-page'> <Admin reports={reports} toggleModal={toggleModal} openModal={openModal}></Admin></Route>
-      <Route path='/details'><Details></Details></Route>
+        <Route path ='/home-page'><HomePage candidates={candidates} selectCandidate={selectCandidate}></HomePage></Route>
+        <Route path='/admin-page'> <Admin reports={reports} toggleModal={toggleModal} openModal={openModal} selectCandidate={selectCandidate} modalData={modalData}></Admin></Route>
+      <Route path='/details' ><Details candidates={candidates} modalData={modalData}></Details></Route>
       <Route path='/new-report'><NewReport></NewReport></Route>
       </Switch>
     </div>
