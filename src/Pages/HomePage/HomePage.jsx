@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React, { useContext, useState } from 'react';
 import "./HomePage.scss"
 import Header from "../../Components/Header/Header"
 import Footer from "../../Components/Footer/Footer"
@@ -8,7 +8,6 @@ import {Link} from "react-router-dom"
 
 
 const HomePage = (props) => {
-
 
 
     return (

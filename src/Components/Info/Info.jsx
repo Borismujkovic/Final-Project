@@ -16,7 +16,7 @@ const Info = (props) => {
                 </div>
             </div>
             <div className='reportWrapper'>
-                <ReportListItem></ReportListItem>
+                <ReportListItem toggleModal={props.toggleModal}></ReportListItem>
             </div>
         </div>
     )

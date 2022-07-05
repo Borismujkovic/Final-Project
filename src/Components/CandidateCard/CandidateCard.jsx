@@ -9,7 +9,7 @@ const CandidateCard = (props) => {
     }}>
       <Link to="./details" className="candidate-details" >
         <div className="wrap">
-          {<img src={props.candidate.avatar} alt=""></img>}
+          <img src={props.candidate.images} alt=""></img>
           <h2>{props.candidate.name}</h2>
         </div>
       </Link>

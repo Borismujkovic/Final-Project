@@ -43,6 +43,8 @@ const toggleModal = () => {
   setOpenModal(!openModal)
 }
 
+
+
   return (
     
     <div id="App">
@@ -50,8 +52,8 @@ const toggleModal = () => {
         <Route exact path ='/'><Login></Login></Route>
         <Route path ='/home-page'><HomePage candidates={candidates} selectCandidate={selectCandidate}></HomePage></Route>
         <Route path='/admin-page'> <Admin reports={reports} toggleModal={toggleModal} openModal={openModal} selectCandidate={selectCandidate} modalData={modalData}></Admin></Route>
-      <Route path='/details' ><Details candidates={candidates} modalData={modalData}></Details></Route>
-      <Route path='/new-report'><NewReport></NewReport></Route>
+      <Route path='/details' ><Details candidates={candidates} modalData={modalData} toggleModal={toggleModal} openModal={openModal}></Details></Route>
+      <Route path='/new-report'><NewReport candidates={candidates}></NewReport></Route>
       </Switch>
     </div>
   );

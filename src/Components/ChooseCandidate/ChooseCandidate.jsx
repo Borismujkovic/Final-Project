@@ -4,7 +4,7 @@ import "./ChooseCandidate.scss"
 const ChooseCandidate = (props) => {
     return (
         <div id="chooseCandidate">
-            <p>Pamela Anderson</p>
+            <p>{props.candidates.name}</p>
         </div>
     )
 }

@@ -6,5 +6,10 @@
         color: white;
         box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
         cursor: pointer;
+        width: 250px;
+        &:hover{
+            background-color: rgba(245, 131, 31, 0.788);
+            border: 3px solid rgba(245, 131, 31, 0.788);
+        }
     }
 }

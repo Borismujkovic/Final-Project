@@ -9,8 +9,8 @@ const Details = (props) => {
     return (
         <div id="details">
             <Header />
-            <Info  modalData={props.modalData}/>
-            {/* <Modal /> */}
+            <Info  modalData={props.modalData} toggleModal={props.toggleModal} candidates={props.candidates}/>
+            {props.openModal && <Modal toggleModal={props.toggleModal} modalData={props.modalData}/>}
             <Footer />
         </div>
     )

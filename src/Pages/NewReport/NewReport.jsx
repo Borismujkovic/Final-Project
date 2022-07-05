@@ -21,9 +21,8 @@ const NewReport = (props) => {
                         <p className='number'>1</p>
                         <h2>Choose candidate:</h2>
                     </div>
-                    <ChooseCandidate></ChooseCandidate>
-                    <ChooseCandidate></ChooseCandidate>
-                    <ChooseCandidate></ChooseCandidate>
+                    {props.candidates.map(e => <ChooseCandidate candidates={e} />)}
+                    
                 </div>
                 <div className='createNewReport'>
                     <div className='cnrHeader'>
