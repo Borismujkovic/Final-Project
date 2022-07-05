@@ -8,7 +8,7 @@ const Form = (props) => {
                 <img src="https://iconape.com/wp-content/files/qa/334838/png/334838.png" alt="" />
              </div>
             <div className='login'>
-                <h1>Login</h1>
+                <h1>Loginn</h1>
                 <label>
                     User Email:
                 </label>
