@@ -1,24 +1,37 @@
 #candidateCard{
     background-color: white;
-    width: 200px;
+    width: 300px;
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
     margin: 5px;
-    
-    img{
-        height: 200px;
-        width: 200px;
-        border-radius: 50%;
-        padding: 15px;
-        margin-bottom: 10px;
-        border: 1px tomato;
+    border: 1px solid grey;
+    &:hover{
+        transform: scale(1.1);
     }
-    h2{
-        border-top: 1px solid lightgrey;
-        margin: 15px 0;
-        padding: 10px 0;
-        color: tomato;
+
+    .candidate-details{
+        text-decoration: none;
+        
+        .wrap{
+            display: flex;
+            flex-direction: column;
+            
+            img{
+            height: 200px;
+            width: 200px;
+            border-radius: 50%;
+            padding: 5px;
+            margin: 30px 0px;
+            border: 1px solid rgb(245 130 31);
+        }
+        h2{
+            border-top: 1px solid lightgrey;
+            margin: 15px 0;
+            padding: 10px 0;
+            color: rgb(245 130 31);
+        }
+    }
     }
 }

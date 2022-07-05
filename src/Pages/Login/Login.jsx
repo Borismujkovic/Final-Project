@@ -6,7 +6,7 @@ import Form from "../../Components/Form/Form"
 const Login = (props) => {
     return (
         <div id="login">
-            <Form />
+            <Form/>
         </div>
     )
 }

@@ -20,7 +20,10 @@ const Admin = (props) => {
         <main>
 
         <div className='search'>
-        <input type="text" />
+            <div className='search-image'>
+                <input type="text" />
+                <img src="https://cdn-icons-png.flaticon.com/512/151/151773.png" alt="" />
+            </div>
         <div>
             <button className='admin-button'>Admin Page</button>
             <button className='newReport-button'>New Report</button>

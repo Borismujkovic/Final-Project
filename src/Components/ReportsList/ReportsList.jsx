@@ -6,7 +6,7 @@ const ReportsList = (props) => {
     <div id="reportsList">
       <div className="singleReport">
         <h1>{props.reports.candidateName}</h1>
-        <h1>Interview Date:</h1>
+        <h1>Date</h1>
         <h1
           onClick={() => {
             props.toggleModal();

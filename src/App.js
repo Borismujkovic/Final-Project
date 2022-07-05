@@ -45,7 +45,7 @@ const toggleModal = () => {
 
       <Switch>
         <Route exact path ='/'><Login></Login></Route>
-        <Route path ='/home-page'><HomePage></HomePage></Route>
+        <Route path ='/home-page'><HomePage candidates={candidates}></HomePage></Route>
         <Route path='/admin-page'> <Admin reports={reports} toggleModal={toggleModal} openModal={openModal}></Admin></Route>
       <Route path='/details'><Details></Details></Route>
       <Route path='/new-report'><NewReport></NewReport></Route>

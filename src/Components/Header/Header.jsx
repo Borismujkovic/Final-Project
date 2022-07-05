@@ -6,7 +6,8 @@ const Header = (props) => {
     return (
         <div id="header">
             <Link to='/home-page'><img src="https://iconape.com/wp-content/png_logo_vector/hr-lab-logo.png" alt="HR Lab logo" /></Link>
-            <button>Logout</button>
+            <button className='btnLogout'>Logout</button>
+
         </div>
     )
 }
