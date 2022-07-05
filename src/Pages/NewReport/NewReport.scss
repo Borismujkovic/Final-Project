@@ -15,62 +15,100 @@
         // min-height: calc(100vh - 20.4px);
         // min-height: 100vh;
 
+  main {
+    min-height: calc(100vh - 20.4px);
+    background-color: rgb(28 42 35);
+    padding-top: 50px;
 
-   }
-
-   h1{
-    
-    font-size: 80px;
-    color: white;
-    padding: 20px;
-    padding-bottom: 40px;
-    text-align: center;
-    
-}
-    
-   .wrapMain{
-       display: flex;
-    //    flex-direction: column;
-       justify-content: center;
-       align-items: center;
-       
-       
-   }
-
-   .createNewReport{
-       display: flex;
-       justify-content: center;
-       align-items: center;
-       flex-direction: row;
-       
-       
-     
-   }
-
-   .chooseCandidate{
-       display: flex;
-       flex-direction: column;
-       border-right: 5px solid black ;
-    //    padding: 50px;
-       h3{
-        color: rgb(245 130 31);;
-       }
-       ul{
-           list-style-type: none;
-           font-weight: 700;
-           font-size: 20px;
-           color:rgb(245 130 31);
-           
-
-        li{
-            border: 1px solid black;
-            margin:20px;
-            background-color: white;
-            width:250px;
-            color: black;
-
+    .search {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin: 00px 200px;
+      .search-image {
+        position: relative;
+        input {
+          padding: 10px 20px;
+          border-radius: 20px;
+          font-weight: 600;
+          outline: none;
         }
-       }
-   }
-}
+        img {
+          height: 25px;
+          position: absolute;
+          top: 5px;
+          right: 10px;
+          cursor: pointer;
+        }
+      }
 
+      .admin-button {
+        padding: 10px 25px;
+        background-color: transparent;
+        cursor: pointer;
+        border: 2px solid rgb(245 130 31);
+        color: white;
+        font-weight: 700;
+        border-top-left-radius: 20px;
+        border-bottom-left-radius: 20px;
+        font-size: 20px;
+        text-decoration: none;
+      }
+      .newReport-button {
+        padding: 10px 25px;
+        background-color: rgb(245 130 31);
+        cursor: pointer;
+        font-size: 20px;
+        font-weight: 700;
+        border: 2px solid rgb(245 130 31);
+        border-top-right-radius: 20px;
+        border-bottom-right-radius: 20px;
+        text-decoration: none;
+        color: white;
+        &:active {
+          padding: 10px 25px;
+          background-color: rgb(245 130 31);
+          cursor: pointer;
+
+          // border: 2px solid rgb(245 130 31);
+          color: white;
+          font-weight: 700;
+          border-top-right-radius: 20px;
+          border-bottom-right-radius: 20px;
+          text-decoration: none;
+        }
+      }
+    }
+
+    .wrapMain {
+      display: flex;
+      flex-direction: column;
+      text-align: center;
+      justify-content: center;
+      align-items: center;
+
+      .createNewReport {
+        display: flex;
+        justify-content: center;
+        margin: 50px;
+        .chooseCandidate {
+          border-right: 3px solid black;
+          padding-right: 80px;
+          ul {
+            list-style-type: none;           
+            li {
+              border: 1px solid white;
+              margin: 20px;
+              background-color: transparent;
+              width: 250px;
+              padding: 10px;
+              border-radius: 20px;
+              color: white;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+}

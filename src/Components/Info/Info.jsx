@@ -7,16 +7,16 @@ const Info = (props) => {
     return (
         <div id= "info">
             <div className='candidateInfo'>
-                <img src="https://pbs.twimg.com/profile_images/1154468712/MILOSEVIC_400x400.jpg" alt="" />
-                <h2>Slobodan</h2>
-                <h3>ex prezidente</h3>
-                <h3>sloba.predsednik@yahoo.com</h3>
+                <img onClick={props.selectCandidate} src="https://pbs.twimg.com/profile_images/1154468712/MILOSEVIC_400x400.jpg" alt="" />
+                <div>
+                <h2>Full Name: {props.modalData.name}</h2>
+                <h3>Date of Birth: {props.modalData.birthday}</h3>
+                <h3>Email: {props.modalData.email}</h3>
+                <h3>Education: {props.modalData.education}</h3>
+                </div>
             </div>
             <div className='reportWrapper'>
                 <ReportListItem></ReportListItem>
-                <ReportListItem></ReportListItem>
-                <ReportListItem></ReportListItem>
-                <ReportListItem></ReportListItem>  
             </div>
         </div>
     )
