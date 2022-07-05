@@ -1,7 +1,11 @@
 #newReport{
    background-color: tomato;
    min-height: 100vh;
-
+   background-image: url(https://images.pexels.com/photos/6070367/pexels-photo-6070367.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);
+   background-repeat: no-repeat;
+   background-size: cover;
+   background-position: center;
+   
    main{
         display: flex;
         justify-content: center;
@@ -17,12 +21,18 @@
        text-align: center;
        justify-content: center;
        align-items: center;
+       h1{
+           margin:50px;
+           font-size: 80px;
+       }
        
    }
 
    .createNewReport{
        display: flex;
        justify-content: center;
+       
+       
      
    }
 
@@ -34,6 +44,9 @@
 
        ul{
            list-style-type: none;
+           font-weight: 700;
+           font-size: 20px;
+           
 
         li{
             border: 1px solid black;

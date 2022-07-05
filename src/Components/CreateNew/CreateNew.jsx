@@ -4,11 +4,12 @@ import "./CreateNew.scss"
 const CreateNew = (props) => {
     return (
         <div id="createNew">
+            <h3>Create new report:</h3>
             <label htmlFor="">
                  Date:
                 <input placeholder=""></input>
             </label>
-            <label htmlFor="">
+            <label  htmlFor="">
                  Company ID:
                 <input placeholder=""></input>
             </label>
@@ -22,7 +23,7 @@ const CreateNew = (props) => {
             </label>
             <label htmlFor="">
                  Report:
-                <input type="text"></input>
+                <input className="report" type="text"></input>
             </label>
             <button>Submit</button>
         </div>

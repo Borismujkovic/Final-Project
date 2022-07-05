@@ -34,16 +34,9 @@ useEffect(()=>{
   fetchReports()
 }, [])
 
-<<<<<<< HEAD
-
-
-
-
-=======
 const toggleModal = () => {
   setOpenModal(!openModal)
 }
->>>>>>> 97d3fd980eed55ec21c926a7ec5bb81e66493366
 
   return (
     
@@ -52,17 +45,10 @@ const toggleModal = () => {
 
       <Switch>
         <Route exact path ='/'><Login></Login></Route>
-<<<<<<< HEAD
-        <Route path ='/home-page'><HomePage candidates={candidates}></HomePage></Route>
-        <Route path='/admin-page'> <Admin></Admin></Route>
-        <Route path='/details'><Details></Details></Route>
-        <Route path='/new-report'><NewReport></NewReport></Route>
-=======
         <Route path ='/home-page'><HomePage></HomePage></Route>
         <Route path='/admin-page'> <Admin reports={reports} toggleModal={toggleModal} openModal={openModal}></Admin></Route>
       <Route path='/details'><Details></Details></Route>
       <Route path='/new-report'><NewReport></NewReport></Route>
->>>>>>> 97d3fd980eed55ec21c926a7ec5bb81e66493366
       </Switch>
     </div>
   );
