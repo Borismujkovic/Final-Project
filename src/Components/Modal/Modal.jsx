@@ -6,9 +6,6 @@ const Modal = (props) => {
         <div id="modalWrapper">
             <div className='modal-content'>
                 <button className='closeBtn' onClick={props.toggleModal}>X</button>
-                {/* <div className='name'>
-                    <h1 onClick={props.toggleModal}>{props.modalData.candidateName}</h1>
-                </div> */}
                 <div className='left'>
                    <img src="https://icon-library.com/images/profile-icon-white/profile-icon-white-3.jpg" alt="" className='userLogo'/>
                    <div className='personalInfo'>
@@ -27,11 +24,11 @@ const Modal = (props) => {
                        </div>
                        <div className='reportInfoItem'>
                             <img src="https://cdn-icons-png.flaticon.com/512/4295/4295910.png" alt="" className="logo" />
-                            <h4>{props.modalData.phase}</h4>
+                            <h4>{props.modalData.status}</h4>
                        </div>
                        <div className='reportInfoItem'>
                             <img src="https://cdn-icons-png.flaticon.com/512/5698/5698496.png" alt="" className="logo" />
-                            <h4>{props.modalData.status}</h4>
+                            <h4>{props.modalData.phase}</h4>
                        </div>
                     </div>
                     <div className='report'>

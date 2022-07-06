@@ -10,7 +10,7 @@ const ReportsList = (props) => {
         <button
           onClick={() => {
             props.toggleModal();
-            props.selectCandidate(props.reports);
+            props.selectReport(props.reports);
           }}
         >
           See Status

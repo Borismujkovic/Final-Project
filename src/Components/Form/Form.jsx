@@ -1,7 +1,17 @@
 import React from 'react';
 import "./Form.scss"
+import { useState } from 'react';
+import { Link } from 'react-router-dom';
+
 
 const Form = (props) => {
+
+    const [company, setCompany] = useState("")
+
+    const getCompany = (event) => {
+        setCompany(event.target.value)
+    }
+
     return (
         <div id="form">
             <div className='logoImg'>
@@ -20,15 +30,17 @@ const Form = (props) => {
                 <label>
                     Company:
                 </label>
-                <select name="company" id="">
+                <select id="" onChange={getCompany}>
                     <option selected disabled hidden>Select company</option>
-                    <option value="facebook">Facebook</option>
-                    <option value="google">Google</option>
-                    <option value="tesla">Tesla</option>
-                    <option value="alphabet">Alphabet</option>
-                    <option value="microsoft">Microsoft</option>
+                    <option value="Facebook">Facebook</option>
+                    <option value="Google">Google</option>
+                    <option value="Tesla">Tesla</option>
+                    <option value="Alphabet">Alphabet</option>
+                    <option value="Microsoft">Microsoft</option>
                 </select>
-                <button>Login</button>
+                <Link to="/home-page" onClick={()=> {
+                    props.getUser(company)
+                }}>Login</Link>
             </div>
            
         </div>
