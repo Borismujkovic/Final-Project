@@ -22,11 +22,11 @@ const Modal = (props) => {
                             <h4>{props.modalData.companyName}</h4>
                        </div>
                        <div className='reportInfoItem'>
-                            <img src="" alt="" className="logo" />
+                            <img src="https://cdn-icons-png.flaticon.com/512/2693/2693507.png" alt="" className="logo" />
                             <h4>25.05.1893.</h4>
                        </div>
                        <div className='reportInfoItem'>
-                            <img src="" alt="" className="logo" />
+                            <img src="https://cdn-icons-png.flaticon.com/512/4295/4295910.png" alt="" className="logo" />
                             <h4>{props.modalData.phase}</h4>
                        </div>
                        <div className='reportInfoItem'>
