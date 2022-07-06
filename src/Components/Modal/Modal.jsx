@@ -12,7 +12,7 @@ const Modal = (props) => {
                 <div className='left'>
                    <img src="https://icon-library.com/images/profile-icon-white/profile-icon-white-3.jpg" alt="" className='userLogo'/>
                    <div className='personalInfo'>
-                        <h2>Josip Broz</h2>
+                        <h2>Josip Broz Tito</h2>
                    </div>
                 </div>
                 <div className='right'>
@@ -22,11 +22,11 @@ const Modal = (props) => {
                             <h4>KPJ</h4>
                        </div>
                        <div className='reportInfoItem'>
-                            <img src="https://cdn-icons.flaticon.com/png/512/439/premium/439398.png?token=exp=1657017964~hmac=a5fd7993d8710404336d97a73ac4318b" alt="" className="logo" />
+                            <img src="https://cdn-icons-png.flaticon.com/512/2693/2693507.png" alt="" className="logo" />
                             <h4>25.05.1893.</h4>
                        </div>
                        <div className='reportInfoItem'>
-                            <img src="https://cdn-icons.flaticon.com/png/512/3783/premium/3783910.png?token=exp=1657023969~hmac=89a6af078a38e564c30e578f3fed53e5" alt="" className="logo" />
+                            <img src="https://cdn-icons-png.flaticon.com/512/4295/4295910.png" alt="" className="logo" />
                             <h4>Technical</h4>
                        </div>
                        <div className='reportInfoItem'>
