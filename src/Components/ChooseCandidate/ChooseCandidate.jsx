@@ -4,7 +4,9 @@ import "./ChooseCandidate.scss"
 const ChooseCandidate = (props) => {
     return (
         <div id="chooseCandidate">
-            <p>{props.candidates.name}</p>
+            <p onClick={() => {
+                props.function(props.candidates)
+                }}>{props.candidates.name}</p>
         </div>
     )
 }

@@ -2,6 +2,20 @@ import React from "react";
 import "./ReportsList.scss";
 
 const ReportsList = (props) => {
+
+  const deleteReport = () => {
+    fetch(`http://localhost:3333/api/reports`, {
+        method: "DELETE",
+        headers: {
+            "Content-Type": "application/json",
+            "Authorization" : `Bearer ${}`
+        }
+    })
+    .then(res=>res.json())
+    .then(res => props.fetchReports())
+}
+
+
   return (
     <div id="reportsList">
       <div className="singleReport">
@@ -14,6 +28,9 @@ const ReportsList = (props) => {
           }}
         >
           See Status
+        </button>
+        <button onClick={deleteReport}>
+          Delete
         </button>
       </div>
     </div>

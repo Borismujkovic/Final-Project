@@ -38,7 +38,7 @@ const Admin = (props) => {
         {/* {props.reports.map((e) => <ReportList reports={e} toggleModal={props.toggleModal} selectCandidate={props.selectCandidate}/>)} */}
         {filteredReports.map(e => {
             if(e.companyName === props.user){
-              return  <ReportList reports={e} toggleModal={props.toggleModal} selectReport={props.selectReport} />
+              return  <ReportList reports={e} toggleModal={props.toggleModal} selectReport={props.selectReport} fetchReports={props.fetchReports}/>
             }
         })}
         </div>

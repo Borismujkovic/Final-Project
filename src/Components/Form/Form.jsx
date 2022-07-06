@@ -7,6 +7,21 @@ import { Link } from 'react-router-dom';
 const Form = (props) => {
 
     const [company, setCompany] = useState("")
+   
+    const [loginData,setLoginData] = useState({
+        email : "",
+        password : "" 
+      })
+
+    const authorisation = () => {
+        fetch("http://localhost:3333/login",{ 
+        method: "POST",
+        body: JSON.stringify(loginData),
+        headers: {"content-type" : "application/json"}
+      })
+      .then(res => res.json())
+      .then(res => console.log(res))
+    } 
 
     const getCompany = (event) => {
         setCompany(event.target.value)
@@ -22,11 +37,15 @@ const Form = (props) => {
                 <label>
                     User Email:
                 </label>
-                    <input type="text"/>
+                    <input type="text" onChange={(event) => {
+                        setLoginData({...loginData, email : event.target.value})
+                    }}/>
                 <label>
                     Password:
                 </label>
-                    <input type="password" name="" id=""/>
+                    <input type="password" name="" id="" onChange={(event) => {
+                        setLoginData({...loginData, password : event.target.value})
+                    }}/>
                 <label>
                     Company:
                 </label>
@@ -38,9 +57,10 @@ const Form = (props) => {
                     <option value="Alphabet">Alphabet</option>
                     <option value="Microsoft">Microsoft</option>
                 </select>
-                <Link to="/home-page" onClick={()=> {
+                <button onClick={()=> {
                     props.getUser(company)
-                }}>Login</Link>
+                    authorisation()
+                }}>Login</button>
             </div>
            
         </div>

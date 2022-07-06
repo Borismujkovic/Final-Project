@@ -1,7 +1,30 @@
-import React from 'react';
+import React,{useState} from 'react';
 import "./CreateNew.scss"
 
 const CreateNew = (props) => {
+
+    const [body,setBody] = useState({
+        candidateId: 0,
+        candidateName: '',
+        companyId:"",
+        companyName:"",
+        interviewDate:"",
+        phase: "",
+        status: "",
+        note: "" 
+    }
+    )
+
+    const postReport = () => {
+        fetch("http://localhost:3333/api/reports",{
+            method: "POST",
+            body: JSON.stringify({...body, candidateId: props.chosenCandidate.id, candidateName: props.chosenCandidate.name}),
+            headers:{"content-type": "application/json"}
+        }).then(res => res.json())
+        
+    }
+        
+
     return ( 
             
         <div id="createNew">
@@ -12,12 +35,16 @@ const CreateNew = (props) => {
             <div className='wrapDropdown'>
             <label>
                  <span>Date:</span>
-                <input type="date" placeholder="" className='date'></input>
+                <input type="date" placeholder="" className='date' onChange={(event) => {
+                    setBody({...body, interviewDate: event.target.value})
+                }}></input>
             </label>
 
             <label>
                  <span>Phase:</span>
-                <select name="Phase" id="" >
+                <select name="Phase" id="" onChange={(event) => {
+                    setBody({...body, phase: event.target.value})
+                }}>
                     <option selected disabled hidden>Phase</option>
                     <option value="Ongoing">Ongoing</option>
                     <option value="Active">Active</option>
@@ -27,7 +54,9 @@ const CreateNew = (props) => {
             
             <label>
                 <span>Status:</span>
-                 <select name="Status" id="">
+                 <select name="Status" id="" onChange={(event) => {
+                    setBody({...body, status: event.target.value})
+                }}>
                    <option selected disabled hidden>Status</option>
                     <option value="HR">HR</option>
                     <option value="Technical">Technical</option>
@@ -38,10 +67,12 @@ const CreateNew = (props) => {
             
             <label className='textarea'>
                <span>Report:</span>
-                <textarea className="report" type="text"></textarea>
+                <textarea className="report" type="text" onChange={(event) => {
+                    setBody({...body, note: event.target.value})
+                }}></textarea>
             </label>
             
-            <button>Submit</button>
+            <button onClick={postReport}>Submit</button>
             </div>
               
         </div>

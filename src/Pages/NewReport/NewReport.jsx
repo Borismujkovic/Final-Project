@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import "./NewReport.scss"
 import Header from "../../Components/Header/Header"
 import CreateNew from "../../Components/CreateNew/CreateNew"
@@ -7,6 +7,14 @@ import {Link} from "react-router-dom"
 
 
 const NewReport = (props) => {
+    const [chosenCandidate, setChosenCandidate] = useState({name: "", id: 0})
+    
+  
+
+    const populateChosenCandidateInfo = (obj) => {
+        setChosenCandidate(obj)
+    }
+
     return (
         <div id="newReport">
             <Header />
@@ -21,7 +29,7 @@ const NewReport = (props) => {
                         <p className='number'>1</p>
                         <h2>Choose candidate:</h2>
                     </div>
-                    {props.candidates.map(e => <ChooseCandidate candidates={e} />)}
+                    {props.candidates.map(e => <ChooseCandidate function={populateChosenCandidateInfo} candidates={e}/>)}
                     
                 </div>
                 <div className='createNewReport'>
@@ -29,7 +37,7 @@ const NewReport = (props) => {
                         <p className='number'>2</p>
                         <h2>Create new report:</h2>
                     </div>
-                    <CreateNew></CreateNew>
+                    <CreateNew chosenCandidate={chosenCandidate} ></CreateNew>
                 </div>
             </main>
             
