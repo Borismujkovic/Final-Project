@@ -9,14 +9,18 @@ const Info = (props) => {
             <div className='candidateInfo'>
                 <img onClick={props.selectCandidate} src="https://pbs.twimg.com/profile_images/1154468712/MILOSEVIC_400x400.jpg" alt="" />
                 <div>
-                <h2>Full Name: {props.modalData.name}</h2>
-                <h3>Date of Birth: {props.modalData.birthday}</h3>
-                <h3>Email: {props.modalData.email}</h3>
-                <h3>Education: {props.modalData.education}</h3>
+                <h2>Full Name: {props.candidateInfo.name}</h2>
+                <h3>Date of Birth: {props.candidateInfo.birthday}</h3>
+                <h3>Email: {props.candidateInfo.email}</h3>
+                <h3>Education: {props.candidateInfo.education}</h3>
                 </div>
             </div>
-            <div className='reportWrapper'>
-                <ReportListItem></ReportListItem>
+             <div className='reportWrapper'>
+                {props.reports.filter(e => {
+                return e.candidateId === props.candidateInfo.id}).map(e => <ReportListItem singleReport={e} toggleModal={props.toggleModal} selectReport={props.selectReport}/>)}
+                
+                
+
             </div>
         </div>
     )

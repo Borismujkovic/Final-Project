@@ -5,21 +5,18 @@ const Modal = (props) => {
     return (
         <div id="modalWrapper">
             <div className='modal-content'>
-                <button className='closeBtn'>X</button>
-                {/* <div className='name'>
-                    <h1 onClick={props.toggleModal}>{props.modalData.candidateName}</h1>
-                </div> */}
+                <button className='closeBtn' onClick={props.toggleModal}>X</button>
                 <div className='left'>
                    <img src="https://icon-library.com/images/profile-icon-white/profile-icon-white-3.jpg" alt="" className='userLogo'/>
                    <div className='personalInfo'>
-                        <h2>Josip Broz Tito</h2>
+                        <h2>{props.modalData.candidateName}</h2>
                    </div>
                 </div>
                 <div className='right'>
                     <div className='reportInfo'>
                        <div className='reportInfoItem'>
                             <img src="https://cdn-icons-png.flaticon.com/512/2891/2891415.png" alt="" className="logo" />
-                            <h4>KPJ</h4>
+                            <h4>{props.modalData.companyName}</h4>
                        </div>
                        <div className='reportInfoItem'>
                             <img src="https://cdn-icons-png.flaticon.com/512/2693/2693507.png" alt="" className="logo" />
@@ -27,16 +24,15 @@ const Modal = (props) => {
                        </div>
                        <div className='reportInfoItem'>
                             <img src="https://cdn-icons-png.flaticon.com/512/4295/4295910.png" alt="" className="logo" />
-                            <h4>Technical</h4>
+                            <h4>{props.modalData.status}</h4>
                        </div>
                        <div className='reportInfoItem'>
                             <img src="https://cdn-icons-png.flaticon.com/512/5698/5698496.png" alt="" className="logo" />
-                            <h4>Passed</h4>
+                            <h4>{props.modalData.phase}</h4>
                        </div>
                     </div>
                     <div className='report'>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda facere consequatur rerum pariatur recusandae doloribus quidem reiciendis voluptatibus dicta! Perspiciatis commodi quaerat quod odio accusamus tempore molestias sunt, beatae laborum?
-                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cumque error tempore pariatur atque, veniam et, minima debitis dolores exercitationem optio velit praesentium, culpa aperiam ipsum provident aspernatur natus ducimus esse?
+                        <p>{props.modalData.note}
                         </p>
                     </div>
                 </div>

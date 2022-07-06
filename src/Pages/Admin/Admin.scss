@@ -1,9 +1,9 @@
 #admin {
   position: relative;
-
   main {
     background-color: rgb(28 42 35);
     padding-top: 50px;
+    min-height: 100vh;
     .search {
       display: flex;
       justify-content: space-between;
