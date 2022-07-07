@@ -11,9 +11,11 @@
             background-color: rgba(245, 131, 31, 0.788);
             border: 3px solid rgba(245, 131, 31, 0.788);
         }
-        &:active{
-            background-color: rgba(245, 131, 31, 0.788);
-            border: 3px solid rgba(245, 131, 31, 0.788);
-        }
+        
+        
     }
 }
+.active p{
+    background-color: rgba(245, 131, 31, 0.788);
+    border: 3px solid rgba(245, 131, 31, 0.788);
+}  
