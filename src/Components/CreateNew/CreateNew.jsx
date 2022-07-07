@@ -31,17 +31,17 @@ const CreateNew = (props) => {
             <div className='form'>
             <div className='wrapDropdown'>
             <label>
-                 <span>Dateic:</span>
+                 <span>Date:</span>
                 <input type="date" placeholder="" className='date' onChange={(event) => {
                     setBody({...body, interviewDate: event.target.value})
                 }}></input>
             </label>
             <label>
                  <span onClick={log}>Status:</span>
-                <select value="Status" name="Status" id="" onChange={(event) => {
+                <select  name="Status" id="" onChange={(event) => {
                     setBody({...body, phase: event.target.value})
                 }}>
-                    <option  disabled hidden>Status</option>
+                    <option disabled hidden>Status</option>
                     <option value="Ongoing">Ongoing</option>
                     <option value="Passed">Passed</option>
                     <option value="Declined">Declined</option>
@@ -49,7 +49,7 @@ const CreateNew = (props) => {
             </label>
             <label>
                 <span>Phase:</span>
-                 <select value="phase" name="Phase" id="" onChange={(event) => {
+                 <select name="Phase" id="" onChange={(event) => {
                     setBody({...body, status: event.target.value})
                 }}>
                    <option disabled hidden>Phase</option>

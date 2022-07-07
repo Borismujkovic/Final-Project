@@ -7,7 +7,7 @@ import { Link } from "react-router-dom";
 import { useLocation } from "react-router-dom";
 
 const NewReport = (props) => {
-  const [chosenCandidate, setChosenCandidate] = useState({ name: "", id: 0 });
+  const [chosenCandidate, setChosenCandidate] = useState({ name: "" , id : 0 });
 
   const populateChosenCandidateInfo = (obj) => {
     setChosenCandidate(obj);
@@ -15,7 +15,7 @@ const NewReport = (props) => {
 
   return (
     <div id="newReport">
-      <Header setToken={props.setToken} deleteData={props.deleteData}/>
+      <Header setToken={props.setToken} deleteData={props.deleteData} changeTheme={props.changeTheme}/>
       <div className="buttons">
         <Link className="admin-button" to="admin-page">
           Admin Page

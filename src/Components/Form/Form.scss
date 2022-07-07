@@ -1,6 +1,6 @@
 #form{
     min-height: 100vh;
-    background-image: url(../../Images/abstract.jpg);
+    background-image: url(https://images.pexels.com/photos/2653362/pexels-photo-2653362.jpeg);
     background-size: cover;
     background-repeat: no-repeat;
     display: flex;
@@ -13,6 +13,10 @@
         img{
             width: 100%;
         }
+    }
+    .error{
+        color: red;
+        font-size: 30px;
     }
     .login{
         display: flex;
@@ -32,10 +36,13 @@
         }
         h1{
             text-align: center;
-            margin-bottom: 50px;
+            margin-bottom: 20px;
+            font-weight: 700;
+            font-size: 60px;
         }
         label{
-            color: rgb(255, 122, 0);
+            color: white;
+            font-weight: 700;
         }
         input{
             background-color: rgba(104, 115, 122, 0.4);

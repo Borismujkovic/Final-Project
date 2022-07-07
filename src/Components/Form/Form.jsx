@@ -5,11 +5,13 @@ import { Link } from "react-router-dom";
 
 const Form = (props) => {
   const [company, setCompany] = useState("");
+  // const [error, setError] = useState("")
 
   const [loginData, setLoginData] = useState({
     email: "",
     password: "",
   });
+
 
   const authorisation = () => {
     fetch("http://localhost:3333/login", {
@@ -23,6 +25,7 @@ const Form = (props) => {
         props.setToken(res.accessToken);
         props.fetchAllData()
       });
+      
   };
 
   const getCompany = () => {
@@ -38,8 +41,12 @@ const Form = (props) => {
           alt=""
         />
       </div>
+      
       <div className="login">
         <h1>Login</h1>
+        <div>
+        <p className="error">INCORRECT</p>
+      </div>
         <label>User Email:</label>
         <input
           type="text"
@@ -56,7 +63,7 @@ const Form = (props) => {
             setLoginData({ ...loginData, password: event.target.value });
           }}
         />
-        <label>Company:</label>
+        <label className="label">Company:</label>
         <select id="" onChange={(event)=>setCompany(event.target.value)}>
           <option selected disabled hidden>
             Select company
