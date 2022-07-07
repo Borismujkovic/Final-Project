@@ -38,6 +38,7 @@ const App = () => {
 
   const getUser = (something) => {
     setUser(something);
+    window.localStorage.setItem("user", something)
   };
 
   const getUserId = () => {
@@ -65,7 +66,11 @@ const App = () => {
   };
 
   useEffect(() => {
-    fetchCompanies()
+    fetchCompanies();
+    if(token){
+      fetchAllData()
+    }
+
   }, []);
 
   const fetchAllData = () => {
