@@ -21,13 +21,13 @@ const Form = (props) => {
       .then((res) => {
         localStorage.setItem("token", res.accessToken);
         props.setToken(res.accessToken);
+        props.fetchAllData()
       });
   };
 
-  const getCompany = (event) => {
-    setCompany(event.target.value);
-    localStorage.setItem("user", `${event.target.value}`)
-
+  const getCompany = () => {
+    if(company) authorisation()
+    else alert('Please select company!')
   };
 
   return (
@@ -57,7 +57,7 @@ const Form = (props) => {
           }}
         />
         <label>Company:</label>
-        <select id="" onChange={getCompany}>
+        <select id="" onChange={(event)=>setCompany(event.target.value)}>
           <option selected disabled hidden>
             Select company
           </option>
@@ -70,8 +70,8 @@ const Form = (props) => {
         <button
           onClick={() => {
             props.getUser(company);
-            authorisation();
-            props.getUserId()
+            props.getUserId();
+            getCompany()
           }}
         >
           Login

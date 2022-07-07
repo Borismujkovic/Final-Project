@@ -18,7 +18,7 @@ const NewReport = (props) => {
 
     return (
         <div id="newReport">
-            <Header  setToken={props.setToken}/>
+            <Header  setToken={props.setToken} changeTheme={props.changeTheme}/>
             <div className='buttons'>
             <Link className='admin-button' to='admin-page'>Admin Page</Link>
             <Link to="/admin/new-report" className='newReport-button'>New Report</Link>

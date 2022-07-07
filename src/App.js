@@ -17,6 +17,12 @@ const App = () => {
   const [modalData, setModalData] = useState(null);
   const [candidateInfo, setCandidateInfo] = useState(null);
   const [token, setToken] = useState(window.localStorage.getItem("token"));
+  const [theme, setTheme] = useState(true)
+
+  const changeTheme = () => {
+    setTheme(!theme)
+  }
+
 
   const selectCandidate = (obj) => {
     setCandidateInfo(obj);
@@ -59,10 +65,14 @@ const App = () => {
   };
 
   useEffect(() => {
-    fetchCandidates();
-    fetchReports();
     fetchCompanies()
   }, []);
+
+  const fetchAllData = () => {
+    console.log('radim')
+    fetchCandidates();
+    fetchReports();
+  }
 
   const localStorage = () => {
     localStorage.setItem("token", "poyy");
@@ -70,23 +80,25 @@ const App = () => {
   
  
   
-  return (<div id="App"> {!token && <Switch>
+  return (<div id={theme ? "light-app" : "dark-app"}> {!token && <Switch>
     <Redirect from="/admin" to="/" />
       <Route exact path="/">
           <Login
-          getUserId={getUserId}
+            getUserId={getUserId}
             getUser={getUser}
             setToken={setToken}
             token={token}
             localStorage={localStorage}
             user={user}
+            companies={companies}
+            fetchAllData={fetchAllData}
           ></Login>
         </Route>
 
     </Switch>}
 
 
-{token && 
+      {token && 
       <Switch>
         <Redirect exact from="/" to="/admin/home-page" />
         <Route exact path="/">
@@ -97,6 +109,9 @@ const App = () => {
             token={token}
             localStorage={localStorage}
             user={user}
+            changeTheme={changeTheme}
+            companies={companies}
+            fetchAllData={fetchAllData}
             ></Login>
         </Route>
         <Route path="/admin/home-page">
@@ -104,6 +119,7 @@ const App = () => {
             candidates={candidates}
             selectCandidate={selectCandidate}
             setToken={setToken}
+            changeTheme={changeTheme}
           ></HomePage>
         </Route>
         <Route path="/admin/admin-page">
@@ -118,6 +134,7 @@ const App = () => {
             fetchReports={fetchReports}
             token={token}
             setToken={setToken}
+            changeTheme={changeTheme}
             ></Admin>
         </Route>
         <Route path="/admin/details">
@@ -130,10 +147,11 @@ const App = () => {
             candidateInfo={candidateInfo}
             selectReport={selectReport}
             setToken={setToken}
+            changeTheme={changeTheme}
             ></Details>
         </Route>
         <Route path="/admin/new-report">
-          <NewReport candidates={candidates} token={token} userId={userId} user={user} fetchReports={fetchReports}  setToken={setToken}></NewReport>
+          <NewReport candidates={candidates} token={token} userId={userId} user={user} fetchReports={fetchReports}  setToken={setToken} changeTheme={changeTheme}></NewReport>
         </Route>
       </Switch>
   

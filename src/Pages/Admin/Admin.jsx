@@ -21,12 +21,12 @@ const Admin = (props) => {
     return (
         <div id="admin">
         {props.openModal && <Modal toggleModal={props.toggleModal} selectReport={props.selectReport} modalData={props.modalData}/>}
-        <Header  setToken={props.setToken} />
+        <Header  setToken={props.setToken} changeTheme={props.changeTheme}/>
         <main>
 
         <div className='search'>
         <div>
-            <Link className='admin-button'>Admin Page</Link>
+            <Link className='admin-button' to="/admin/admin-page">Admin Page</Link>
             <Link to="/admin/new-report" className='newReport-button'>New Report</Link>
         </div>
             <div className='search-image'>
