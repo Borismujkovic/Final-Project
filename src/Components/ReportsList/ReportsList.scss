@@ -4,10 +4,13 @@
         border: 2px solid white;
         display: flex;
         justify-content: space-between;
-        margin: 10px 0;
+        margin: 15px 0;
         padding: 15px;
         color: white;
-        h1{
+        box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+    
+    
+        h3{
             width: 33%;
             text-align: center;
         }
@@ -25,6 +28,15 @@
             &:hover{
                 background-color: white;
                 color: grey;
+            }
+        }
+        .deleteBtn{
+            color: white;
+            border: #DE4C2A 2px solid;
+            padding: 0 18px;
+            &:hover{
+                background-color: #DE4C2A;
+                color: white;
             }
         }
     }

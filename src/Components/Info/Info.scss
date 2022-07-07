@@ -3,12 +3,24 @@
     flex-direction: column;
     flex-grow: 1;
     justify-content: space-around;
+    // align-items: center;
     background-color: rgb(28 42 35);
+   
     .candidateInfo{
         display: flex;
         align-items: center;
         margin: 20px 100px;
+        
         color: white;
+       .candidateDetails{
+        width: 27%;
+        
+        >h2{
+            border-bottom: 1px solid white;
+        }
+        
+    
+    }
         > img{
             border-radius: 50%;
             height: 250px;
@@ -24,6 +36,7 @@
             }
             h3{
                 margin: 10px 0;
+                border-bottom: 1px solid white;
             }
         }
     }

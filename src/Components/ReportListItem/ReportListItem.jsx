@@ -5,7 +5,7 @@ const ReportListItem = (props) => {
     return (
         <div id= "reportListItem">
             <h3>{props.singleReport.companyName}</h3>
-            <h3>Date</h3>
+            <h3>{props.singleReport.interviewDate.substring(4, 15)}</h3>
             <h3>{props.singleReport.status}</h3>
             <img onClick={() => {
                 props.toggleModal();

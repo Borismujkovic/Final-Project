@@ -1,8 +1,6 @@
 import React,{useState} from 'react';
 import "./CreateNew.scss"
-
 const CreateNew = (props) => {
-
     const [body,setBody] = useState({
         candidateId: "",
         candidateName: "",
@@ -11,12 +9,10 @@ const CreateNew = (props) => {
         interviewDate:"",
         phase: "",
         status: "",
-        note: "" 
+        note: ""
     }
     )
-
     const postReport = () => {
-        
         fetch("http://localhost:3333/api/reports",{
             method: "POST",
             body: JSON.stringify({...body, candidateId: props.chosenCandidate.id, candidateName: props.chosenCandidate.name} ),
@@ -24,22 +20,13 @@ const CreateNew = (props) => {
             "Authorization" : `Bearer ${props.token}`}
         }).then(res => res.json())
         .then(props.fetchReports())
-        
     }
-
     const log = () => {
         console.log(props.chosenCandidate)
     }
-        
-
-
-    return ( 
-        
+    return (
         <div id="createNew">
-        
             <div className='form'>
-            
-
             <div className='wrapDropdown'>
             <label>
                  <span>Dateic:</span>
@@ -47,7 +34,6 @@ const CreateNew = (props) => {
                     setBody({...body, interviewDate: event.target.value})
                 }}></input>
             </label>
-
             <label>
                  <span onClick={log}>Status:</span>
                 <select value="Status" name="Status" id="" onChange={(event) => {
@@ -59,7 +45,6 @@ const CreateNew = (props) => {
                     <option value="Declined">Declined</option>
                 </select>
             </label>
-            
             <label>
                 <span>Phase:</span>
                  <select value="phase" name="Phase" id="" onChange={(event) => {
@@ -73,28 +58,15 @@ const CreateNew = (props) => {
                 </select>
             </label>
             </div>
-            
             <label className='textarea'>
-               <span>Reportic:</span>
+               <span>Report:</span>
                 <textarea className="report" type="text" onChange={(event) => {
                     setBody({...body, note: event.target.value})
                 }}></textarea>
             </label>
-            
             <button onClick={postReport}>Submit</button>
             </div>
-              
         </div>
-            
-            
-        
     )
 }
-
 export default CreateNew
-            
-
-           
-           
-            
-            
