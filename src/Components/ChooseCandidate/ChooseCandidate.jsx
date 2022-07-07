@@ -1,7 +1,8 @@
-import React from 'react';
+import React, { useState } from 'react';
 import "./ChooseCandidate.scss"
 
 const ChooseCandidate = (props) => {
+  
     return (
         <div id="chooseCandidate">
             <p onClick={() => {

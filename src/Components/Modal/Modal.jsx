@@ -20,7 +20,7 @@ const Modal = (props) => {
                        </div>
                        <div className='reportInfoItem'>
                             <img src="https://cdn-icons-png.flaticon.com/512/2693/2693507.png" alt="" className="logo" />
-                            <h4>25.05.1893.</h4>
+                            <h4>{props.modalData.interviewDate.substring(4, 15)}</h4>
                        </div>
                        <div className='reportInfoItem'>
                             <img src="https://cdn-icons-png.flaticon.com/512/4295/4295910.png" alt="" className="logo" />

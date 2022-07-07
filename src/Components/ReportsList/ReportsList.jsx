@@ -20,16 +20,15 @@ const ReportsList = (props) => {
     <div id="reportsList">
       <div className="singleReport">
         <h1>{props.reports.candidateName}</h1>
-        <h1 className="date">Date</h1>
+        <h1 className="date">{props.reports.interviewDate.substring(4, 15)}</h1>
         <button
           onClick={() => {
             props.toggleModal();
             props.selectReport(props.reports);
-          }}
-        >
+          }}>
           See Status
         </button>
-        <button onClick={deleteReport}>
+        <button className="deleteBtn" onClick={deleteReport}>
           Delete
         </button>
       </div>

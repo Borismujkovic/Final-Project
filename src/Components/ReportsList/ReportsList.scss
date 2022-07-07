@@ -27,5 +27,14 @@
                 color: grey;
             }
         }
+        .deleteBtn{
+            color: white;
+            border: #DE4C2A 2px solid;
+            padding: 0 18px;
+            &:hover{
+                background-color: #DE4C2A;
+                color: white;
+            }
+        }
     }
 }

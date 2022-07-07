@@ -16,8 +16,8 @@ const Info = (props) => {
             <div className='candidateInfo'>
                 <div>
                 <h2>Full Name: {props.candidateInfo.name}</h2>
-                <h3>Date of Birth: {props.candidateInfo.birthday}</h3>
-                <h3>Email: {props.candidateInfo.email}</h3>
+                <h3>Date of Birth: {props.candidateInfo.birthday.substring(4, 15)}</h3>
+                <h3>Email: {props.candidateInfo.email.toLowerCase()}</h3>
                 <h3>Education: {props.candidateInfo.education}</h3>
                 </div>
             </div>

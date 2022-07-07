@@ -10,7 +10,7 @@ import { useLocation } from 'react-router-dom';
 const NewReport = (props) => {
     const [chosenCandidate, setChosenCandidate] = useState({name: "", id: 0})
     
-  
+    
 
     const populateChosenCandidateInfo = (obj) => {
         setChosenCandidate(obj)
