@@ -15,10 +15,10 @@ const Info = (props) => {
         <div id= "info">
             <div className='candidateInfo'>
                 <div className='candidateDetails'>
-                <h2>Full Name: {props.candidateInfo.name}</h2>
-                <h3>Date of Birth: {props.candidateInfo.birthday.substring(4, 15)}</h3>
-                <h3>Email: {props.candidateInfo.email.toLowerCase()}</h3>
-                <h3>Education: {props.candidateInfo.education}</h3>
+                <h2><span>Full Name:</span> {props.candidateInfo.name}</h2>
+                <h3><span>Date of Birth:</span> {props.candidateInfo.birthday.substring(4, 15)}</h3>
+                <h3><span>Email:</span> {props.candidateInfo.email.toLowerCase()}</h3>
+                <h3><span>Education:</span> {props.candidateInfo.education}</h3>
                 </div>
             </div>
              <div className='reportWrapper'>
