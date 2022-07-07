@@ -1,5 +1,7 @@
 import React,{useState} from 'react';
 import "./CreateNew.scss"
+import { Link } from 'react-router-dom';
+
 const CreateNew = (props) => {
     const [body,setBody] = useState({
         candidateId: "",
@@ -64,7 +66,7 @@ const CreateNew = (props) => {
                     setBody({...body, note: event.target.value})
                 }}></textarea>
             </label>
-            <button onClick={postReport}>Submit</button>
+            <Link to="/admin/admin-page">  <button onClick={postReport}>Submit</button></Link>
             </div>
         </div>
     )

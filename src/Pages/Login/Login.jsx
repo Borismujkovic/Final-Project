@@ -15,6 +15,7 @@ const Login = (props) => {
         getUserId={props.getUserId}
         companies={props.companies}
         fetchAllData={props.fetchAllData}
+        
       />
     </div>
   );

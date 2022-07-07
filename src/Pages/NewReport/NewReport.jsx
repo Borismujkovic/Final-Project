@@ -15,7 +15,7 @@ const NewReport = (props) => {
 
   return (
     <div id="newReport">
-      <Header setToken={props.setToken} />
+      <Header setToken={props.setToken} deleteData={props.deleteData}/>
       <div className="buttons">
         <Link className="admin-button" to="admin-page">
           Admin Page

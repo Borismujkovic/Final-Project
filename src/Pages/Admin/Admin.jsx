@@ -21,7 +21,7 @@ const Admin = (props) => {
     return (
         <div id="admin">
         {props.openModal && <Modal toggleModal={props.toggleModal} selectReport={props.selectReport} modalData={props.modalData}/>}
-        <Header  setToken={props.setToken} changeTheme={props.changeTheme}/>
+        <Header  setToken={props.setToken} changeTheme={props.changeTheme} deleteData={props.deleteData}/>
         <main>
 
         <div className='search'>
@@ -42,7 +42,6 @@ const Admin = (props) => {
         })}
         </div>
         </main>
-        {/* <Footer /> */}
         </div>
     )
 }

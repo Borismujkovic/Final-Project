@@ -11,7 +11,7 @@ const Details = (props) => {
 
     return (
         <div id="details">
-            <Header  setToken={props.setToken} changeTheme={props.changeTheme}/>
+            <Header  setToken={props.setToken} changeTheme={props.changeTheme} deleteData={props.deleteData}/>
             <Info  modalData={props.modalData} reports={props.reports} toggleModal={props.toggleModal} candidateInfo={props.candidateInfo} selectReport={props.selectReport}/>
             {props.openModal &&  <Modal toggleModal={props.toggleModal} modalData={props.modalData}/> }
             <Footer />

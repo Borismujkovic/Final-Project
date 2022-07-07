@@ -82,6 +82,11 @@ const App = () => {
   const localStorage = () => {
     localStorage.setItem("token", "poyy");
   };
+
+  const deleteData = () => {
+    setCandidates([])
+    setReports([])
+  }
   
  
   
@@ -125,6 +130,7 @@ const App = () => {
             selectCandidate={selectCandidate}
             setToken={setToken}
             changeTheme={changeTheme}
+            deleteData={deleteData}
           ></HomePage>
         </Route>
         <Route path="/admin/admin-page">
@@ -140,6 +146,7 @@ const App = () => {
             token={token}
             setToken={setToken}
             changeTheme={changeTheme}
+            deleteData={deleteData}
             ></Admin>
         </Route>
         <Route path="/admin/details">
@@ -153,10 +160,11 @@ const App = () => {
             selectReport={selectReport}
             setToken={setToken}
             changeTheme={changeTheme}
+            deleteData={deleteData}
             ></Details>
         </Route>
         <Route path="/admin/new-report">
-          <NewReport candidates={candidates} token={token} userId={userId} user={user} fetchReports={fetchReports}  setToken={setToken} changeTheme={changeTheme}></NewReport>
+          <NewReport  candidates={candidates} token={token} userId={userId} user={user} fetchReports={fetchReports}  setToken={setToken} changeTheme={changeTheme} deleteData={deleteData}></NewReport>
         </Route>
       </Switch>
   

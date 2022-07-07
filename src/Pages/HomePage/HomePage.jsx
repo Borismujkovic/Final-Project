@@ -21,7 +21,7 @@ const HomePage = (props) => {
 
   return (
     <div id="homePage">
-      <Header setToken={props.setToken} changeTheme={props.changeTheme}/>
+      <Header setToken={props.setToken} changeTheme={props.changeTheme} deleteData={props.deleteData}/>
       <div className="wrap">
         <Link to="/admin/admin-page" className="myCandidates">
           My candidates
