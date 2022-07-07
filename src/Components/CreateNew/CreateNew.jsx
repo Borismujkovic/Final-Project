@@ -4,8 +4,8 @@ import "./CreateNew.scss"
 const CreateNew = (props) => {
 
     const [body,setBody] = useState({
-        candidateId: props.chosenCandidate.id,
-        candidateName: props.chosenCandidate.name,
+        candidateId: "",
+        candidateName: "",
         companyId: props.userId,
         companyName: props.user,
         interviewDate:"",
@@ -19,12 +19,16 @@ const CreateNew = (props) => {
         
         fetch("http://localhost:3333/api/reports",{
             method: "POST",
-            body: JSON.stringify({...body}),
+            body: JSON.stringify({...body, candidateId: props.chosenCandidate.id, candidateName: props.chosenCandidate.name} ),
             headers:{"content-type": "application/json",
             "Authorization" : `Bearer ${props.token}`}
         }).then(res => res.json())
         .then(props.fetchReports())
         
+    }
+
+    const log = () => {
+        console.log(props.chosenCandidate)
     }
         
 
@@ -45,11 +49,11 @@ const CreateNew = (props) => {
             </label>
 
             <label>
-                 <span>Phase:</span>
+                 <span onClick={log}>Status:</span>
                 <select name="Phase" id="" onChange={(event) => {
                     setBody({...body, phase: event.target.value})
                 }}>
-                    <option selected disabled hidden>Phase</option>
+                    <option selected disabled hidden>Status</option>
                     <option value="Ongoing">Ongoing</option>
                     <option value="Active">Active</option>
                     <option value="Declined">Declined</option>
@@ -57,11 +61,12 @@ const CreateNew = (props) => {
             </label>
             
             <label>
-                <span>Status:</span>
+                <span>Phase:</span>
                  <select name="Status" id="" onChange={(event) => {
                     setBody({...body, status: event.target.value})
                 }}>
-                   <option selected disabled hidden>Status</option>
+                   <option selected disabled hidden>Phase</option>
+                   <option value="Final">CV</option>
                     <option value="HR">HR</option>
                     <option value="Technical">Technical</option>
                     <option value="Final">Final</option>
