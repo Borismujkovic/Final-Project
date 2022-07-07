@@ -70,7 +70,7 @@ const CreateNew = (props) => {
             </div>
             
             <label className='textarea'>
-               <span>Report:</span>
+               <span>Reportic:</span>
                 <textarea className="report" type="text" onChange={(event) => {
                     setBody({...body, note: event.target.value})
                 }}></textarea>
