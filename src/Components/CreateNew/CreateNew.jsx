@@ -4,10 +4,10 @@ import "./CreateNew.scss"
 const CreateNew = (props) => {
 
     const [body,setBody] = useState({
-        candidateId: 0,
-        candidateName: '',
-        companyId:"",
-        companyName:"",
+        candidateId: props.chosenCandidate.id,
+        candidateName: props.chosenCandidate.name,
+        companyId: props.userId,
+        companyName: props.user,
         interviewDate:"",
         phase: "",
         status: "",
@@ -16,17 +16,21 @@ const CreateNew = (props) => {
     )
 
     const postReport = () => {
+        
         fetch("http://localhost:3333/api/reports",{
             method: "POST",
-            body: JSON.stringify({...body, candidateId: props.chosenCandidate.id, candidateName: props.chosenCandidate.name}),
-            headers:{"content-type": "application/json"}
+            body: JSON.stringify({...body}),
+            headers:{"content-type": "application/json",
+            "Authorization" : `Bearer ${props.token}`}
         }).then(res => res.json())
+        .then(props.fetchReports())
         
     }
         
 
+
     return ( 
-            
+        
         <div id="createNew">
         
             <div className='form'>

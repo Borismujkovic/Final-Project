@@ -6,7 +6,7 @@ import Form from "../../Components/Form/Form"
 const Login = (props) => {
     return (
         <div id="login">
-            <Form getUser={props.getUser} setToken={props.setToken}/>
+            <Form getUser={props.getUser} setToken={props.setToken} token={props.token} localStorage={props.localStorage} user={props.user} getUserId={props.getUserId}/>
         </div>
     )
 }

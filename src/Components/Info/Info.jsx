@@ -14,7 +14,6 @@ const Info = (props) => {
     return (
         <div id= "info">
             <div className='candidateInfo'>
-                {/* <img onClick={props.selectCandidate} src={props.modalData.images} alt="" /> */}
                 <div>
                 <h2>Full Name: {props.candidateInfo.name}</h2>
                 <h3>Date of Birth: {props.candidateInfo.birthday}</h3>

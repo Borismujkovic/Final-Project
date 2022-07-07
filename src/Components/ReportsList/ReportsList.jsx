@@ -4,11 +4,11 @@ import "./ReportsList.scss";
 const ReportsList = (props) => {
 
   const deleteReport = () => {
-    fetch(`http://localhost:3333/api/reports`, {
+    fetch(`http://localhost:3333/api/reports/${props.reports.id}`, {
         method: "DELETE",
         headers: {
             "Content-Type": "application/json",
-            "Authorization" : `Bearer ${}`
+            "Authorization" : `Bearer ${props.token}`
         }
     })
     .then(res=>res.json())

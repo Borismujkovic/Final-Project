@@ -4,6 +4,7 @@ import Header from "../../Components/Header/Header"
 import CreateNew from "../../Components/CreateNew/CreateNew"
 import ChooseCandidate from '../../Components/ChooseCandidate/ChooseCandidate';
 import {Link} from "react-router-dom"
+import { useLocation } from 'react-router-dom';
 
 
 const NewReport = (props) => {
@@ -17,10 +18,10 @@ const NewReport = (props) => {
 
     return (
         <div id="newReport">
-            <Header />
+            <Header  setToken={props.setToken}/>
             <div className='buttons'>
             <Link className='admin-button' to='admin-page'>Admin Page</Link>
-            <Link to="/new-report" className='newReport-button'>New Report</Link>
+            <Link to="/admin/new-report" className='newReport-button'>New Report</Link>
         </div>
             <main>
                 
@@ -37,7 +38,7 @@ const NewReport = (props) => {
                         <p className='number'>2</p>
                         <h2>Create new report:</h2>
                     </div>
-                    <CreateNew chosenCandidate={chosenCandidate} ></CreateNew>
+                    <CreateNew chosenCandidate={chosenCandidate} token={props.token} userId={props.userId} user={props.user} fetchReports={props.fetchReports}></CreateNew>
                 </div>
             </main>
             

@@ -17,11 +17,13 @@ const HomePage = (props) => {
     c.name.toLowerCase().includes(searchValue.toLowerCase())
   );
 
+  
+
   return (
     <div id="homePage">
-      <Header />
+      <Header setToken={props.setToken}/>
       <div className="wrap">
-        <Link to="/admin-page" className="myCandidates">
+        <Link to="/admin/admin-page" className="myCandidates">
           My candidates
         </Link>
         <div className="search-image">

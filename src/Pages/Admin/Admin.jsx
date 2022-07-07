@@ -21,13 +21,13 @@ const Admin = (props) => {
     return (
         <div id="admin">
         {props.openModal && <Modal toggleModal={props.toggleModal} selectReport={props.selectReport} modalData={props.modalData}/>}
-        <Header />
+        <Header  setToken={props.setToken} />
         <main>
 
         <div className='search'>
         <div>
             <Link className='admin-button'>Admin Page</Link>
-            <Link to="/new-report" className='newReport-button'>New Report</Link>
+            <Link to="/admin/new-report" className='newReport-button'>New Report</Link>
         </div>
             <div className='search-image'>
                 <input onChange={searchFilteredReports} type="text" />
@@ -35,10 +35,9 @@ const Admin = (props) => {
             </div>
         </div>
         <div className='reports'>
-        {/* {props.reports.map((e) => <ReportList reports={e} toggleModal={props.toggleModal} selectCandidate={props.selectCandidate}/>)} */}
         {filteredReports.map(e => {
             if(e.companyName === props.user){
-              return  <ReportList reports={e} toggleModal={props.toggleModal} selectReport={props.selectReport} fetchReports={props.fetchReports}/>
+              return  <ReportList reports={e} toggleModal={props.toggleModal} selectReport={props.selectReport} fetchReports={props.fetchReports} token={props.token}/>
             }
         })}
         </div>
