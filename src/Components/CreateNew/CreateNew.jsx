@@ -42,7 +42,7 @@ const CreateNew = (props) => {
 
             <div className='wrapDropdown'>
             <label>
-                 <span>Date:</span>
+                 <span>Dateic:</span>
                 <input type="date" placeholder="" className='date' onChange={(event) => {
                     setBody({...body, interviewDate: event.target.value})
                 }}></input>
