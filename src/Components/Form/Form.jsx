@@ -5,13 +5,12 @@ import { Link } from "react-router-dom";
 
 const Form = (props) => {
   const [company, setCompany] = useState("");
-  // const [error, setError] = useState("")
+  const [error, setError] = useState("")
 
   const [loginData, setLoginData] = useState({
     email: "",
     password: "",
   });
-
 
   const authorisation = () => {
     fetch("http://localhost:3333/login", {
@@ -21,16 +20,19 @@ const Form = (props) => {
     })
       .then((res) => res.json())
       .then((res) => {
+        if (!res.ok) {
+          setError("Inorrect pass and email");
+        }
         localStorage.setItem("token", res.accessToken);
         props.setToken(res.accessToken);
-        props.fetchAllData()
-      });
+        props.fetchAllData();
+      })
       
   };
 
   const getCompany = () => {
-    if(company) authorisation()
-    else alert('Please select company!')
+    if (company) authorisation();
+    else alert("Please select company!");
   };
 
   return (
@@ -41,12 +43,12 @@ const Form = (props) => {
           alt=""
         />
       </div>
-      
+
       <div className="login">
         <h1>Login</h1>
         <div>
-        <p className="error">INCORRECT</p>
-      </div>
+          <p className="error">{error}</p>
+        </div>
         <label>User Email:</label>
         <input
           type="text"
@@ -64,7 +66,7 @@ const Form = (props) => {
           }}
         />
         <label className="label">Company:</label>
-        <select id="" onChange={(event)=>setCompany(event.target.value)}>
+        <select id="" onChange={(event) => setCompany(event.target.value)}>
           <option selected disabled hidden>
             Select company
           </option>
@@ -78,7 +80,7 @@ const Form = (props) => {
           onClick={() => {
             props.getUser(company);
             props.getUserId();
-            getCompany()
+            getCompany();
           }}
         >
           Login

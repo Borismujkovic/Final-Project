@@ -20,7 +20,7 @@ const ReportsList = (props) => {
     <div id="reportsList">
       <div className="singleReport">
         <h3>{props.reports.candidateName}</h3>
-        <h3 className="date">{props.reports.interviewDate.substring(4, 15)}</h3>
+        <h3 className="date">{props.reports.interviewDate}</h3>
         <button
           onClick={() => {
             props.toggleModal();
