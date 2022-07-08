@@ -1,10 +1,11 @@
 import React from "react";
 import "./Form.scss";
 import { useState } from "react";
+import { type } from "@testing-library/user-event/dist/type";
 
 const Form = (props) => {
   const [company, setCompany] = useState("");
-  const [error, setError] = useState("")
+  const [error, setError] = useState("");
 
   const [loginData, setLoginData] = useState({
     email: "",
@@ -19,14 +20,15 @@ const Form = (props) => {
     })
       .then((res) => res.json())
       .then((res) => {
-        if (!res.ok) {
-          setError("Incorrect pass or email");
+        if(typeof res === 'object'){
+          localStorage.setItem("token", res.accessToken);
+          props.setToken(res.accessToken);
+          props.fetchAllData();
         }
-        localStorage.setItem("token", res.accessToken);
-        props.setToken(res.accessToken);
-        props.fetchAllData();
-      })
-      
+        else if(typeof res === 'string'){
+          setError(res)
+        }
+      });
   };
 
   const getCompany = () => {

@@ -17,11 +17,13 @@ const App = () => {
   const [modalData, setModalData] = useState(null);
   const [candidateInfo, setCandidateInfo] = useState(null);
   const [token, setToken] = useState(window.localStorage.getItem("token"));
-  const [theme, setTheme] = useState(true)
+  const [theme, setTheme] = useState(window.localStorage.getItem(true))
 
   const changeTheme = () => {
     setTheme(!theme)
   }
+
+
 
   const selectCandidate = (obj) => {
     setCandidateInfo(obj);
