@@ -9,6 +9,8 @@ const Header = (props) => {
         props.setToken('')
         localStorage.clear()
       }
+
+
     return (
         <div id="header">
             <Link to='/admin/home-page'><img src="https://iconape.com/wp-content/png_logo_vector/hr-lab-logo.png" alt="HR Lab logo" /></Link>

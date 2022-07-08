@@ -23,9 +23,7 @@ const CreateNew = (props) => {
         }).then(res => res.json())
         .then(props.fetchReports())
     }
-    const log = () => {
-        console.log(props.chosenCandidate)
-    }
+    
     return (
         <div id="createNew">
             <div className='form'>
@@ -37,7 +35,7 @@ const CreateNew = (props) => {
                 }}></input>
             </label>
             <label>
-                 <span onClick={log}>Status:</span>
+                 <span>Status:</span>
                 <select  name="Status" id="" onChange={(event) => {
                     setBody({...body, phase: event.target.value})
                 }}>

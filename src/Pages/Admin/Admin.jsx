@@ -4,7 +4,6 @@ import Header from "../../Components/Header/Header"
 import Modal from "../../Components/Modal/Modal"
 import ReportList from "../../Components/ReportsList/ReportsList"
 import {Link} from "react-router-dom"
-import Footer from '../../Components/Footer/Footer';
 
 const Admin = (props) => {
     const [searchReports, setSearchReports] = useState('');

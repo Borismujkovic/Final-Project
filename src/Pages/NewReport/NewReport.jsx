@@ -4,7 +4,6 @@ import Header from "../../Components/Header/Header";
 import CreateNew from "../../Components/CreateNew/CreateNew";
 import ChooseCandidate from "../../Components/ChooseCandidate/ChooseCandidate";
 import { Link } from "react-router-dom";
-import { useLocation } from "react-router-dom";
 
 const NewReport = (props) => {
   const [chosenCandidate, setChosenCandidate] = useState({ name: "" , id : 0 });

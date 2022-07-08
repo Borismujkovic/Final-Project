@@ -23,7 +23,6 @@ const App = () => {
     setTheme(!theme)
   }
 
-
   const selectCandidate = (obj) => {
     setCandidateInfo(obj);
   };
@@ -45,6 +44,7 @@ const App = () => {
     companies.find(e => {
       if(e.name === user) return window.localStorage.setItem("userId", e.id)
     })
+    
   }
 
   const fetchCandidates = () => {
@@ -74,7 +74,6 @@ const App = () => {
   }, []);
 
   const fetchAllData = () => {
-    console.log('radim')
     fetchCandidates();
     fetchReports();
   }
@@ -113,7 +112,7 @@ const App = () => {
         <Redirect exact from="/" to="/admin/home-page" />
         <Route exact path="/">
           <Login
-          getUserId={getUserId}
+            getUserId={getUserId}
             getUser={getUser}
             setToken={setToken}
             token={token}
