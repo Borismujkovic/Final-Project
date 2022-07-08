@@ -20,7 +20,7 @@ const Form = (props) => {
       .then((res) => res.json())
       .then((res) => {
         if (!res.ok) {
-          setError("Incorrect pass and email");
+          setError("Incorrect pass or email");
         }
         localStorage.setItem("token", res.accessToken);
         props.setToken(res.accessToken);
