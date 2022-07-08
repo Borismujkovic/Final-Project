@@ -1,7 +1,6 @@
 import React from "react";
 import "./Form.scss";
 import { useState } from "react";
-import { Link } from "react-router-dom";
 
 const Form = (props) => {
   const [company, setCompany] = useState("");
@@ -12,7 +11,7 @@ const Form = (props) => {
     password: "",
   });
 
-  const authorisation = () => {
+  const authorization = () => {
     fetch("http://localhost:3333/login", {
       method: "POST",
       body: JSON.stringify(loginData),
@@ -21,7 +20,7 @@ const Form = (props) => {
       .then((res) => res.json())
       .then((res) => {
         if (!res.ok) {
-          setError("Inorrect pass and email");
+          setError("Incorrect pass and email");
         }
         localStorage.setItem("token", res.accessToken);
         props.setToken(res.accessToken);
@@ -31,7 +30,7 @@ const Form = (props) => {
   };
 
   const getCompany = () => {
-    if (company) authorisation();
+    if (company) authorization();
     else alert("Please select company!");
   };
 
